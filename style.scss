@@ -1,0 +1,184 @@
+/*
+Theme Name: Series
+Theme URI: http://neloca.com
+Author: Pat Wangrungarun
+Author URI: http://phatograph.com
+Description: A very specific theme for series.tech.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+Text Domain: series
+*/
+
+$screen-mobiles: 580px;
+$screen-tablets: 900px;
+$screen-tablets-l: 1300px;
+$screen-tablets-xl: 1500px;
+
+$images-path: '/series/wp-content/themes/series/images';
+
+:root {
+  --global-space: 20px;
+
+  --c-green: #6EB92B;
+
+  --ease-in-quad: cubic-bezier(.55, .085, .68, .53);
+  --ease-in-cubic: cubic-bezier(.550, .055, .675, .19);
+  --ease-in-quart: cubic-bezier(.895, .03, .685, .22);
+  --ease-in-quint: cubic-bezier(.755, .05, .855, .06);
+  --ease-in-expo: cubic-bezier(.95, .05, .795, .035);
+  --ease-in-circ: cubic-bezier(.6, .04, .98, .335);
+
+  --ease-out-quad: cubic-bezier(.25, .46, .45, .94);
+  --ease-out-cubic: cubic-bezier(.215, .61, .355, 1);
+  --ease-out-quart: cubic-bezier(.165, .84, .44, 1);
+  --ease-out-quint: cubic-bezier(.23, 1, .32, 1);
+  --ease-out-expo: cubic-bezier(.19, 1, .22, 1);
+  --ease-out-circ: cubic-bezier(.075, .82, .165, 1);
+
+  --ease-in-out-quad: cubic-bezier(.455, .03, .515, .955);
+  --ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
+  --ease-in-out-quart: cubic-bezier(.77, 0, .175, 1);
+  --ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
+  --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  --ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
+
+  // @media (max-width: $screen-mobiles) {
+  //   --global-space: 15px;
+  // }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  // font-family: HiraginoSans-W3, sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--c-black);
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0,0);
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+figure,
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+  // border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+#wpadminbar {
+  opacity: 0.4;
+  display: none;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 calc(var(--global-space));
+}
+
+.H1 {
+  &__a {
+    display: block;
+    font-size: 0;
+    text-indent: -99999px;
+    width: 218px;
+    height: 67px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(#{$images-path}/logo.svg);
+    transform: translateX(20px);
+  }
+}
+
+.Header {
+  padding: calc(var(--global-space) * 3) 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.Nav {
+  margin-top: calc(var(--global-space) * 1.5);
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    > * {
+      &:not(:last-child) {
+        margin-right: calc(var(--global-space) * 2);
+      }
+    }
+
+    .menu-item {
+      a {
+        font-family: Quark-Light;
+        font-size: 16px;
+        color: #1A1A1A;
+        letter-spacing: 1.33px;
+        text-transform: uppercase;
+      }
+    }
+
+    .current-menu-item  {
+      a {
+        font-family: Quark-Bold;
+        font-size: 16px;
+        color: #1A1A1A;
+        letter-spacing: 1.33px;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #1A1A1A;
+        }
+      }
+    }
+  }
+}

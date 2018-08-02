@@ -1,0 +1,22 @@
+{
+  "name": "neloca",
+  "version": "1.0.0",
+  "description": "You'll need to have a Sass gem and Node.js. Check out `Procfile`.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/bitiapps/neloca-wordpress.git"
+  },
+  "author": "Pat Wangrungarun",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/bitiapps/neloca-wordpress#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {}
+}
