@@ -126,4 +126,72 @@ svg {
         height: 2px;
         background-color: #1A1A1A; }
 
+.Post {
+  display: flex;
+  align-items: flex-start; }
+  .Post__img {
+    width: 270px;
+    object-fit: cover;
+    margin-right: calc(var(--global-space) * 2); }
+  .Post__right > *:not(:last-child) {
+    margin-bottom: calc(var(--global-space) * .5); }
+  .Post__tags {
+    display: flex; }
+    .Post__tags > *:not(:last-child) {
+      margin-right: calc(var(--global-space) * 1); }
+    .Post__tags__a {
+      display: flex;
+      align-items: center;
+      font-family: Phenomena-Bold;
+      font-size: 14px;
+      color: #1A1A1A;
+      letter-spacing: 1px;
+      background-color: #FCEE21;
+      padding: calc(var(--global-space) * .25) calc(var(--global-space) * .5); }
+      .Post__tags__a::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: #1A1A1A;
+        border-radius: 50%;
+        margin-right: calc(var(--global-space) * .25); }
+  .Post__h2 {
+    font-family: Quark-Bold;
+    font-size: 28px;
+    color: #1A1A1A;
+    letter-spacing: 0.76px; }
+  .Post__details {
+    display: flex; }
+    .Post__details > *:not(:last-child) {
+      margin-right: calc(var(--global-space) * 1); }
+    .Post__details__li {
+      font-family: Quark-Light;
+      font-size: 14px;
+      color: #1A1A1A;
+      letter-spacing: 0.38px; }
+      .Post__details__li span {
+        text-shadow: 1px 1px 0 #FCEE21; }
+  .Post__p {
+    font-family: Thonburi;
+    font-size: 14px;
+    color: #1A1A1A; }
+  .Post__read-more {
+    display: flex;
+    align-items: center;
+    font-family: Phenomena-Bold;
+    font-size: 20px;
+    color: #1A1A1A;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 0 0 #FCEE22;
+    text-transform: uppercase;
+    margin-top: calc(var(--global-space) * 1); }
+    .Post__read-more::before {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 1px;
+      background-color: #1A1A1A;
+      margin-right: calc(var(--global-space) * .75); }
+
 /*# sourceMappingURL=style.css.map */
