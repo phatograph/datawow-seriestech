@@ -16,7 +16,7 @@
         </form>
       </div>
 
-      <h1 class="H1"><a class="H1__a">Series.tech</a></h1>
+      <h1 class="H1"><a class="H1__a" href="<?php echo site_url(); ?>">Series.tech</a></h1>
 
       <?php wp_nav_menu(array('theme_location' => 'primary-menu', 'container_class' => 'Nav')); ?>
     </div>
@@ -69,32 +69,38 @@
     <div class="container">
       <div class="Content">
         <?php if (have_posts()) : ?>
-          <?php while (have_posts()) : the_post(); ?>
-            <div class="Post">
-              <img class="Post__img" src="<?php the_post_thumbnail_url(); ?>" />
+          <div class="Posts">
+            <?php while (have_posts()) : the_post(); ?>
+              <div class="Post">
+                <img class="Post__img" src="<?php the_post_thumbnail_url(); ?>" />
 
-              <div class="Post__right">
-                <?php
-                  $post_categories = get_the_category()
-                ?>
+                <div class="Post__right">
+                  <?php
+                    $post_categories = get_the_category()
+                  ?>
 
-                <ul class="Post__tags">
-                  <?php foreach($post_categories as $category) { ?>
-                    <li>
-                      <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
-                    </li>
-                  <?php } ?>
-                </ul>
-                <h3 class="Post__h3"><?php the_title() ?></h3>
-                <ul class="Post__details">
-                  <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
-                  <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
-                </ul>
-                <div class="Post__p"><?php the_excerpt(); ?></div>
+                  <ul class="Post__tags">
+                    <?php foreach($post_categories as $category) { ?>
+                      <li>
+                        <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
+                      </li>
+                    <?php } ?>
+                  </ul>
+                  <h3 class="Post__h3"><?php the_title() ?></h3>
+                  <ul class="Post__details">
+                    <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
+                    <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
+                  </ul>
+                  <div class="Post__p"><?php the_excerpt(); ?></div>
+                </div>
               </div>
-            </div>
-          <?php endwhile; ?>
+            <?php endwhile; ?>
+          </div>
         <?php endif; ?>
+
+        <div class="Pagination">
+          <?php the_posts_pagination(array('mid_size' => 2, 'screen_reader_text' => '', 'prev_text' => 'Prev')); ?>
+        </div>
       </div>
 
       <div class="Sidebar">
@@ -123,7 +129,7 @@
   <footer class="Footer">
     <div class="container">
       <div class="Footer__header">
-        <h1 class="Footer__header__h1"><a class="Footer__header__h1__a">Series.tech</a></h1>
+        <h1 class="Footer__header__h1"><a class="Footer__header__h1__a" href="<?php echo site_url(); ?>">Series.tech</a></h1>
         <p class="Footer__header__p">:start up news and trends</p>
       </div>
       <div class='Footer__footer'>

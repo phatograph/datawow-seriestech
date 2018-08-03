@@ -278,7 +278,7 @@ svg {
 }
 
 .Hero {
-  margin-bottom: calc(var(--global-space) * 2);
+  margin-bottom: calc(var(--global-space) * 2.5);
 
   .Post {
     border-bottom: 1px solid rgba(#1A1A1A, 0.2);
@@ -616,6 +616,79 @@ svg {
       font-family: Quark-Light;
       font-size: 14px;
       color: #FFFFFF;
+    }
+  }
+}
+
+.Pagination {
+  .pagination {
+    padding-top: calc(var(--global-space) * 3);
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      display: none;
+    }
+
+    .nav-links {
+      display: inline-flex;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+
+      > * {
+        &:not(:last-child) {
+          border-right: 1px solid #E3E3E3;
+        }
+      }
+
+      .page-numbers {
+        font-family: Quark-Bold;
+        font-size: 14px;
+        color: #1A1A1A;
+        display: block;
+        padding: calc(var(--global-space) * .5) calc(var(--global-space) * 1);
+
+        &.current {
+          color: #fff;
+          background-color: #1A1A1A;
+        }
+
+        &.prev,
+        &.next {
+          display: flex;
+          align-items: center;
+
+          &::before,
+          &::after {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 10px;
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(#{$images-path}/icon-arrow-r.svg);
+            margin-left: calc(var(--global-space) * .5);
+            transform: translateY(-1px);
+          }
+
+          &::before {
+            display: none;
+            margin-left: 0;
+            margin-right: calc(var(--global-space) * .5);
+            background-image: url(#{$images-path}/icon-arrow-l.svg);
+          }
+        }
+
+        &.prev {
+          &::before {
+            display: block;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

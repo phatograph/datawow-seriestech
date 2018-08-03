@@ -195,7 +195,7 @@ svg {
         background-color: #1A1A1A; }
 
 .Hero {
-  margin-bottom: calc(var(--global-space) * 2); }
+  margin-bottom: calc(var(--global-space) * 2.5); }
   .Hero .Post {
     border-bottom: 1px solid rgba(26, 26, 26, 0.2);
     padding-bottom: calc(var(--global-space) * 1.5); }
@@ -420,5 +420,49 @@ svg {
       font-family: Quark-Light;
       font-size: 14px;
       color: #FFFFFF; }
+
+.Pagination .pagination {
+  padding-top: calc(var(--global-space) * 3);
+  display: flex;
+  justify-content: center; }
+  .Pagination .pagination h2 {
+    display: none; }
+  .Pagination .pagination .nav-links {
+    display: inline-flex;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16); }
+    .Pagination .pagination .nav-links > *:not(:last-child) {
+      border-right: 1px solid #E3E3E3; }
+    .Pagination .pagination .nav-links .page-numbers {
+      font-family: Quark-Bold;
+      font-size: 14px;
+      color: #1A1A1A;
+      display: block;
+      padding: calc(var(--global-space) * .5) calc(var(--global-space) * 1); }
+      .Pagination .pagination .nav-links .page-numbers.current {
+        color: #fff;
+        background-color: #1A1A1A; }
+      .Pagination .pagination .nav-links .page-numbers.prev, .Pagination .pagination .nav-links .page-numbers.next {
+        display: flex;
+        align-items: center; }
+        .Pagination .pagination .nav-links .page-numbers.prev::before, .Pagination .pagination .nav-links .page-numbers.prev::after, .Pagination .pagination .nav-links .page-numbers.next::before, .Pagination .pagination .nav-links .page-numbers.next::after {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 10px;
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-image: url(/series/wp-content/themes/series/images/icon-arrow-r.svg);
+          margin-left: calc(var(--global-space) * .5);
+          transform: translateY(-1px); }
+        .Pagination .pagination .nav-links .page-numbers.prev::before, .Pagination .pagination .nav-links .page-numbers.next::before {
+          display: none;
+          margin-left: 0;
+          margin-right: calc(var(--global-space) * .5);
+          background-image: url(/series/wp-content/themes/series/images/icon-arrow-l.svg); }
+      .Pagination .pagination .nav-links .page-numbers.prev::before {
+        display: block; }
+      .Pagination .pagination .nav-links .page-numbers.prev::after {
+        display: none; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow Right Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-series" transform="translate(-904.000000, -3060.000000)" fill="#1A1A1A">
+            <g id="Pagination-#6" transform="translate(135.000000, 3043.000000)">
+                <g id="Next" transform="translate(678.000000, 0.000000)">
+                    <path d="M103.753377,22.99925 L101.272136,25.29425 C100.876938,25.68525 100.876938,26.31725 101.272136,26.70825 C101.668334,27.09925 102.309655,27.09925 102.704852,26.70825 L106.555778,23.06125 C106.841921,22.77725 107,22.40225 107,22.00025 C107,21.59925 106.841921,21.22225 106.555778,20.94025 L102.704852,17.29325 C102.309655,16.90225 101.668334,16.90225 101.272136,17.29325 C100.876938,17.68325 100.876938,18.31625 101.272136,18.70725 L103.751376,20.99925 L92.0005003,20.99925 C91.4482241,20.99925 91,21.44725 91,21.99925 C91,22.55125 91.4482241,22.99925 92.0005003,22.99925 L103.753377,22.99925 Z" id="Arrow-Right-Icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
