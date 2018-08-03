@@ -22,53 +22,79 @@
     </div>
   </div>
 
-  <div class="Hero">
-    <div class="container">
-      <div class="Post">
-        <img class="Post__img" src="https://placeimg.com/270/200/tech" />
+  <?php
+    $args = array(
+      'posts_per_page' => 1,
+      'category_name' => 'featured',
+    );
 
-        <div class="Post__right">
-          <ul class="Post__tags">
-            <li>
-              <a class="Post__tags__a">Feature</a>
-            </li>
-          </ul>
-          <h3 class="Post__h3">Apple Watch + AI = เครื่องตรวจจับสัญญาณโรคเบาหวานบนข้อมือ</h3>
-          <ul class="Post__details">
-            <li class="Post__details__li">By <span><strong>Cole Coleman</strong></span></li>
-            <li class="Post__details__li"><time>Dec 30, 2017</time></li>
-            <li class="Post__details__li"><span>120 <strong>Comments</strong></span></li>
-          </ul>
-          <p class="Post__p">ในช่วงปีที่ผ่านมา หนึ่งในการเปลี่ยนแปลงของสมาร์ทโฟนกลุ่มเรือธงที่ชัดที่สุดคือเรื่องราคา ที่กระโดดจากช่วง 2-3 หมื่นขึ้นไปเป็นช่วง 3-4 หมื่น ท่ามกลางการเปลี่ยนแปลงของสเปคและดีไซน์ที่ไม่ได้สร้างความแตกต่างมากนัก...</p>
-          <a class="Post__read-more">Continue reading</a>
-        </div>
+    $posts_array = get_posts($args);
+  ?>
+
+  <?php if (count($posts_array) > 0) { ?>
+    <div class="Hero">
+      <div class="container">
+
+        <?php foreach ($posts_array as $post) : setup_postdata($post); ?>
+          <div class="Post">
+            <img class="Post__img" src="<?php the_post_thumbnail_url(); ?>" />
+
+            <div class="Post__right">
+              <?php
+                $post_categories = get_the_category()
+              ?>
+
+              <ul class="Post__tags">
+                <?php foreach($post_categories as $category) { ?>
+                  <li>
+                    <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
+                  </li>
+                <?php } ?>
+              </ul>
+              <h3 class="Post__h3"><?php the_title() ?></h3>
+              <ul class="Post__details">
+                <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
+                <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
+              </ul>
+              <div class="Post__p"><?php the_excerpt(); ?></div>
+              <a class="Post__read-more">Continue reading</a>
+            </div>
+          </div>
+        <?php endforeach; wp_reset_postdata(); ?>
       </div>
     </div>
-  </div>
+  <?php } ?>
 
   <div class="Main">
     <div class="container">
       <div class="Content">
-        <?php for ($i = 0; $i < 5; $i++) { ?>
-          <div class="Post">
-            <img class="Post__img" src="https://placeimg.com/270/200/tech" />
+        <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
+            <div class="Post">
+              <img class="Post__img" src="<?php the_post_thumbnail_url(); ?>" />
 
-            <div class="Post__right">
-              <ul class="Post__tags">
-                <li>
-                  <a class="Post__tags__a">Feature</a>
-                </li>
-              </ul>
-              <h3 class="Post__h3">Apple Watch + AI = เครื่องตรวจจับสัญญาณโรคเบาหวานบนข้อมือ</h3>
-              <ul class="Post__details">
-                <li class="Post__details__li">By <span><strong>Cole Coleman</strong></span></li>
-                <li class="Post__details__li"><time>Dec 30, 2017</time></li>
-                <li class="Post__details__li"><span>120 <strong>Comments</strong></span></li>
-              </ul>
-              <p class="Post__p">ในช่วงปีที่ผ่านมา หนึ่งในการเปลี่ยนแปลงของสมาร์ทโฟนกลุ่มเรือธงที่ชัดที่สุดคือเรื่องราคา ที่กระโดดจากช่วง 2-3 หมื่นขึ้นไปเป็นช่วง 3-4 หมื่น ท่ามกลางการเปลี่ยนแปลงของสเปคและดีไซน์ที่ไม่ได้สร้างความแตกต่างมากนัก...</p>
+              <div class="Post__right">
+                <?php
+                  $post_categories = get_the_category()
+                ?>
+
+                <ul class="Post__tags">
+                  <?php foreach($post_categories as $category) { ?>
+                    <li>
+                      <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
+                    </li>
+                  <?php } ?>
+                </ul>
+                <h3 class="Post__h3"><?php the_title() ?></h3>
+                <ul class="Post__details">
+                  <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
+                  <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
+                </ul>
+                <div class="Post__p"><?php the_excerpt(); ?></div>
+              </div>
             </div>
-          </div>
-        <?php } ?>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
 
       <div class="Sidebar">

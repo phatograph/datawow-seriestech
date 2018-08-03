@@ -301,43 +301,66 @@ svg {
 
     > * {
       &:not(:last-child) {
-        margin-bottom: calc(var(--global-space) * .75);
+        margin-bottom: calc(var(--global-space) * .5);
       }
     }
   }
 
   &__tags {
     display: flex;
+    flex-wrap: wrap;
 
     > * {
       &:not(:last-child) {
-        margin-right: calc(var(--global-space) * 1);
+        margin-right: calc(var(--global-space) * .5);
       }
     }
 
     &__a {
+      --post-tags-a-c: #FCEE21;
       display: flex;
       align-items: center;
-      font-family: Phenomena-Bold;
-      font-size: 14px;
-      color: #1A1A1A;
-      letter-spacing: 1px;
-      background-color: #FCEE21;
+      background-color: #1A1A1A;
       padding: calc(var(--global-space) * .25) calc(var(--global-space) * .5);
+      border-right: 6px solid var(--post-tags-a-c);
 
-      &::before {
-        content: '';
-        display: block;
-        width: 6px;
-        height: 6px;
-        background-color: #1A1A1A;
-        border-radius: 50%;
-        margin-right: calc(var(--global-space) * .25);
+      &--news {
+        --post-tags-a-c: #46D7CE;
+      }
+
+      &--featured {
+        --post-tags-a-c: #1A1A1A;
+        background-color: #FCEE21;
+        border-right: none;
+
+        span {
+          color: #1A1A1A !important;
+        }
+      }
+
+      span {
+        font-family: Phenomena-Bold;
+        font-size: 14px;
+        color: #fff;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 6px;
+          height: 6px;
+          background-color: var(--post-tags-a-c);
+          border-radius: 50%;
+          margin-right: calc(var(--global-space) * .25);
+        }
       }
     }
   }
 
   &__h3 {
+    margin-top: calc(var(--global-space) * 1);
     font-family: Quark-Bold;
     font-size: 28px;
     color: #1A1A1A;
@@ -372,7 +395,7 @@ svg {
   }
 
   &__read-more {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-family: Phenomena-Bold;
     font-size: 20px;
@@ -380,7 +403,7 @@ svg {
     letter-spacing: 1.5px;
     text-shadow: 2px 0 0 #FCEE22;
     text-transform: uppercase;
-    margin-top: calc(var(--global-space) * 1);
+    margin-top: calc(var(--global-space) * .5);
 
     &::before {
       content: '';
