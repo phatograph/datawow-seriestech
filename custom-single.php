@@ -7,10 +7,10 @@
         $post_categories = get_the_category()
       ?>
 
-      <ul class="HeroPost__ul">
+      <ul class="Post__tags">
         <?php foreach($post_categories as $category) { ?>
           <li>
-            <a class="HeroPost__ul__a" href><?php echo $category->name ?></a>
+            <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>" href><span><?php echo $category->name ?></span></a>
           </li>
         <?php } ?>
       </ul>

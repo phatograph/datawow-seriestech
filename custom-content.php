@@ -1,42 +1,66 @@
-<?php
-  $posts_array = get_posts(array(
-    'posts_per_page' => 1,
-    'category_name' => 'featured',
-  ));
-?>
+<?php if (is_home() && !is_paged()) { ?>
+  <?php
+    $posts_array = get_posts(array(
+      'posts_per_page' => 1,
+      'category_name' => 'featured',
+    ));
+  ?>
 
-<?php if (count($posts_array) > 0) { ?>
-  <div class="Hero">
-    <div class="container">
+  <?php if (count($posts_array) > 0) { ?>
+    <div class="Hero">
+      <div class="container">
 
-      <?php foreach ($posts_array as $post) : setup_postdata($post); ?>
-        <div class="Post">
-          <a class="Post__img" href="<?php the_permalink() ?>">
-            <img src="<?php the_post_thumbnail_url(); ?>" />
-          </a>
+        <?php foreach ($posts_array as $post) : setup_postdata($post); ?>
+          <div class="Post">
+            <a class="Post__img" href="<?php the_permalink() ?>">
+              <img src="<?php the_post_thumbnail_url(); ?>" />
+            </a>
 
-          <div class="Post__right">
-            <?php
-              $post_categories = get_the_category()
-            ?>
+            <div class="Post__right">
+              <?php
+                $post_categories = get_the_category()
+              ?>
 
-            <ul class="Post__tags">
-              <?php foreach($post_categories as $category) { ?>
-                <li>
-                  <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
-                </li>
-              <?php } ?>
-            </ul>
-            <h3 class="Post__h3"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-            <ul class="Post__details">
-              <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
-              <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
-            </ul>
-            <div class="Post__p"><?php the_excerpt(); ?></div>
-            <a class="Post__read-more" href="<?php the_permalink() ?>">Continue reading</a>
+              <ul class="Post__tags">
+                <?php foreach($post_categories as $category) { ?>
+                  <li>
+                    <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
+                  </li>
+                <?php } ?>
+              </ul>
+              <h3 class="Post__h3"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+              <ul class="Post__details">
+                <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
+                <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
+              </ul>
+              <div class="Post__p"><?php the_excerpt(); ?></div>
+              <a class="Post__read-more" href="<?php the_permalink() ?>">Continue reading</a>
+            </div>
           </div>
-        </div>
-      <?php endforeach; wp_reset_postdata(); ?>
+        <?php endforeach; wp_reset_postdata(); ?>
+      </div>
+    </div>
+  <?php } ?>
+<?php } ?>
+
+<?php if (is_category()) { ?>
+  <?php
+    $current_cat = get_category(get_query_var('cat'));
+  ?>
+
+  <div class="CategoryHeader">
+    <div class="container">
+      <div class="CategoryHeader__wrapper">
+        <h2 class="CategoryHeader__h2"><?php echo $current_cat->name ?></h2>
+
+        <?php if ($current_cat->slug == 'news') { ?>
+          <p class="CategoryHeader__p">รวบรวมข่าวสารเกี่ยวกับ Startups</p>
+        <?php } ?>
+
+        <?php if ($current_cat->slug == 'reports') { ?>
+          <p class="CategoryHeader__p CategoryHeader__p--reports">บทความวิเคราะห์ทางเทคนิคที่มีเฉพาะในSeriesเท่านั้น</p>
+        <?php } ?>
+      </div>
     </div>
   </div>
 <?php } ?>
