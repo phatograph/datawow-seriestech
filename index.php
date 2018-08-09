@@ -24,6 +24,8 @@
 
   <?php if (is_single()) { ?>
     <?php include(get_query_template('custom-single')) ?>
+  <?php } else if (is_page()) { ?>
+    <?php include(get_query_template('custom-page')) ?>
   <?php } else { ?>
     <?php include(get_query_template('custom-content')) ?>
   <?php } ?>

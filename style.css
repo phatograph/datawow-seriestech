@@ -582,7 +582,7 @@ svg {
   display: flex;
   align-items: center;
   margin-left: calc(var(--global-space) * .5); }
-  .CategoryHeader__p::before {
+  .CategoryHeader__p[class*='--']::before {
     content: '';
     display: block;
     width: 6px;
@@ -592,5 +592,79 @@ svg {
     margin-right: calc(var(--global-space) * .35); }
   .CategoryHeader__p--reports::before {
     background-color: #FCEE21; }
+
+.Contact {
+  flex: 1;
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 350px 1fr;
+  grid-gap: calc(var(--global-space) * 7); }
+  .Contact__left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+    .Contact__left__item {
+      font-family: Quark-Light;
+      font-size: 16px;
+      color: #1A1A1A;
+      letter-spacing: 0.43px;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      grid-gap: 1ex;
+      margin-bottom: calc(var(--global-space) * .5); }
+      .Contact__left__item:not(:last-child) {
+        margin-right: calc(var(--global-space) * 1); }
+      .Contact__left__item dd {
+        font-weight: bold; }
+  .Contact__right__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: calc(var(--global-space) * 1); }
+    .Contact__right__form__label {
+      display: block;
+      font-family: Quark-Bold;
+      font-size: 16px;
+      color: #1A1A1A;
+      letter-spacing: 0.43px; }
+      .Contact__right__form__label--full {
+        grid-column: 1 / 3; }
+      .Contact__right__form__label .label {
+        display: block;
+        margin-bottom: calc(var(--global-space) * .25); }
+      .Contact__right__form__label .wpcf7-form-control-wrap {
+        display: block; }
+        .Contact__right__form__label .wpcf7-form-control-wrap textarea,
+        .Contact__right__form__label .wpcf7-form-control-wrap input {
+          display: block;
+          background-color: #F8F8F8;
+          border: 1px solid rgba(151, 151, 151, 0.25);
+          width: 100%;
+          padding: calc(var(--global-space) * .5) calc(var(--global-space) * .5); }
+      .Contact__right__form__label .wpcf7-not-valid-tip {
+        font-size: 11px;
+        margin-top: calc(var(--global-space) * .25); }
+    .Contact__right__form__submit {
+      margin-top: calc(var(--global-space) * 1); }
+      .Contact__right__form__submit .wpcf7-submit {
+        background-color: #1A1A1A;
+        font-family: Quark-Bold;
+        font-size: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0.43px;
+        display: inline-block;
+        padding: calc(var(--global-space) * .25) calc(var(--global-space) * 2); }
+  .Contact__right .wpcf7 form .wpcf7-response-output {
+    margin: 0;
+    margin-top: calc(var(--global-space) * .5);
+    border: none;
+    padding: 0;
+    font-family: Quark-Bold;
+    font-size: 16px;
+    color: #1A1A1A;
+    letter-spacing: 0.43px; }
+  .Contact__right .wpcf7 form .wpcf7-validation-errors {
+    color: red; }
+  .Contact__right .wpcf7 form .wpcf7-mail-sent-ok {
+    color: green; }
 
 /*# sourceMappingURL=style.css.map */

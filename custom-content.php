@@ -54,7 +54,7 @@
         <h2 class="CategoryHeader__h2"><?php echo $current_cat->name ?></h2>
 
         <?php if ($current_cat->slug == 'news') { ?>
-          <p class="CategoryHeader__p">รวบรวมข่าวสารเกี่ยวกับ Startups</p>
+          <p class="CategoryHeader__p CategoryHeader__p--news">รวบรวมข่าวสารเกี่ยวกับ Startups</p>
         <?php } ?>
 
         <?php if ($current_cat->slug == 'reports') { ?>
