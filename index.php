@@ -37,7 +37,9 @@
 
         <?php foreach ($posts_array as $post) : setup_postdata($post); ?>
           <div class="Post">
-            <img class="Post__img" src="<?php the_post_thumbnail_url(); ?>" />
+            <a class="Post__img" href="<?php the_permalink() ?>">
+              <img src="<?php the_post_thumbnail_url(); ?>" />
+            </a>
 
             <div class="Post__right">
               <?php
@@ -51,13 +53,13 @@
                   </li>
                 <?php } ?>
               </ul>
-              <h3 class="Post__h3"><?php the_title() ?></h3>
+              <h3 class="Post__h3"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
               <ul class="Post__details">
                 <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
                 <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
               </ul>
               <div class="Post__p"><?php the_excerpt(); ?></div>
-              <a class="Post__read-more">Continue reading</a>
+              <a class="Post__read-more" href="<?php the_permalink() ?>">Continue reading</a>
             </div>
           </div>
         <?php endforeach; wp_reset_postdata(); ?>
@@ -72,7 +74,9 @@
           <div class="Posts">
             <?php while (have_posts()) : the_post(); ?>
               <div class="Post">
-                <img class="Post__img" src="<?php the_post_thumbnail_url(); ?>" />
+                <a class="Post__img" href="<?php the_permalink() ?>">
+                  <img src="<?php the_post_thumbnail_url(); ?>" />
+                </a>
 
                 <div class="Post__right">
                   <?php
@@ -86,7 +90,7 @@
                       </li>
                     <?php } ?>
                   </ul>
-                  <h3 class="Post__h3"><?php the_title() ?></h3>
+                  <h3 class="Post__h3"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
                   <ul class="Post__details">
                     <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
                     <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>

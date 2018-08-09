@@ -204,9 +204,12 @@ svg {
   display: flex;
   align-items: flex-start; }
   .Post__img {
-    width: 270px;
-    object-fit: cover;
+    flex: 0 0 270px;
+    display: block;
     margin-right: calc(var(--global-space) * 2); }
+    .Post__img img {
+      width: 100%;
+      object-fit: cover; }
   .Post__right {
     flex: 1; }
     .Post__right > *:not(:last-child) {
@@ -344,7 +347,7 @@ svg {
     background-color: #F3F3F3; }
 
 .Footer {
-  margin-top: calc(var(--global-space) * 3);
+  margin-top: calc(var(--global-space) * 5);
   background-color: #1A1A1A;
   padding-top: calc(var(--global-space) * 2.5);
   padding-bottom: calc(var(--global-space) * 2.5);
