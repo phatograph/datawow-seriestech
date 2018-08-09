@@ -65,6 +65,16 @@
   </div>
 <?php } ?>
 
+<?php if (is_search()) { ?>
+  <div class="CategoryHeader">
+    <div class="container">
+      <div class="CategoryHeader__wrapper">
+        <h2 class="CategoryHeader__h2">Search results for: <?php the_search_query() ?></h2>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+
 <div class="Main">
   <div class="container">
     <div class="Content">
@@ -84,7 +94,9 @@
                 <ul class="Post__tags">
                   <?php foreach($post_categories as $category) { ?>
                     <li>
-                      <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
+                      <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>" href="<?php echo site_url(); ?>/category/<?php echo $category->slug ?>">
+                        <span><?php echo $category->name ?></span>
+                      </a>
                     </li>
                   <?php } ?>
                 </ul>

@@ -10,8 +10,8 @@
           <li><a class="Header__top__ul__a Header__top__ul__a--twitter"></a></li>
         </ul>
 
-        <form class="Header__top__search">
-          <input type="text" placeholder="Search and enter" />
+        <form class="Header__top__search" action="<?php echo site_url(); ?>">
+          <input type="text" placeholder="Search and enter" name="s" />
           <button type="submit"></button>
         </form>
       </div>
