@@ -84,23 +84,27 @@
     </div>
 
     <div class="Sidebar">
-      <h2 class="Sidebar__h2">Series top 5</h2>
+      <div class="Sidebar__box">
+        <h2 class="Sidebar__h2">Series top 5</h2>
 
-      <ul class="Sidebar__ul">
-        <?php for ($i = 0; $i < 5; $i++) { ?>
-          <li class="Sidebar__ul__li">
-            <div class="Sidebar__ul__li__wrapper">
-              <h4 class="Sidebar__ul__li__h4">Apple Watch + AI = เครื่องตรวจจับสัญญาณโรคเบาหวานบนข้อมือ</h4>
-              <ul class="Sidebar__ul__li__ul">
-                <li class="Sidebar__ul__li__ul__li">By <strong>Allen Thomas</strong></li>
-              </ul>
-            </div>
-          </li>
-        <?php } ?>
-      </ul>
+        <ul class="Sidebar__ul">
+          <?php for ($i = 0; $i < 5; $i++) { ?>
+            <li class="Sidebar__ul__li">
+              <div class="Sidebar__ul__li__wrapper">
+                <h4 class="Sidebar__ul__li__h4">Apple Watch + AI = เครื่องตรวจจับสัญญาณโรคเบาหวานบนข้อมือ</h4>
+                <ul class="Sidebar__ul__li__ul">
+                  <li class="Sidebar__ul__li__ul__li">By <strong>Allen Thomas</strong></li>
+                </ul>
+              </div>
+            </li>
+          <?php } ?>
+        </ul>
+      </div>
 
-      <div class="Sidebar__ads">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/sidebar-ads.png" />
+      <div class="Sidebar__box">
+        <div class="Sidebar__ads">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/images/sidebar-ads.png" />
+        </div>
       </div>
     </div>
   </div>

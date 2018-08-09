@@ -117,7 +117,7 @@ svg {
 
 #wpadminbar {
   opacity: 0.4;
-  display: none;
+  // display: none;
 }
 
 .container {
@@ -184,6 +184,9 @@ svg {
       }
 
       &__a {
+        display: block;
+        transform: translateY(-1px);
+
         &::before {
           content: '';
           display: block;
@@ -221,6 +224,7 @@ svg {
       }
 
       button {
+        transform: translateY(-1px);
         background-color: transparent;
         border: none;
         flex: 0 0 16px;
@@ -443,6 +447,12 @@ svg {
   flex: 0 0 300px;
   margin-left: calc(var(--global-space) * 3);
 
+  > * {
+    &:not(:last-child) {
+      margin-bottom: calc(var(--global-space) * 3);
+    }
+  }
+
   &__h2 {
     font-family: Phenomena-Bold;
     font-size: 20px;
@@ -502,7 +512,6 @@ svg {
   }
 
   &__ads {
-    margin-top: calc(var(--global-space) * 3);
     padding: calc(var(--global-space) * 1);
     background-color: #F3F3F3;
   }
@@ -693,6 +702,168 @@ svg {
             display: none;
           }
         }
+      }
+    }
+  }
+}
+
+.HeroPost {
+  margin-bottom: calc(var(--global-space) * 3);
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    flex: 1;
+
+    &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__right {
+    flex: 0 0 570px;
+    margin-left: calc(var(--global-space) * 3);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      &:not(:last-child) {
+        margin-right: calc(var(--global-space) * .5);
+      }
+    }
+
+    &__a {
+      display: flex;
+      align-items: center;
+      border: 2px solid #3CD8CF;
+      padding: calc(var(--global-space) * .15) calc(var(--global-space) * .5);
+      font-family: Phenomena-Bold;
+      font-size: 14px;
+      color: #3CD8CF;
+      letter-spacing: 1px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: #3CD8CF;
+        border-radius: 50%;
+        margin-right: calc(var(--global-space) * .35);
+      }
+    }
+  }
+
+  &__h2 {
+    font-family: Quark-Bold;
+    font-size: 36px;
+    color: #1A1A1A;
+    letter-spacing: 0.97px;
+    margin: calc(var(--global-space) * 1.5) 0 calc(var(--global-space) * 1.5);
+  }
+
+  &__share {
+    font-family: Quark-Bold;
+    font-size: 14px;
+    color: #1A1A1A;
+    letter-spacing: 0.38px;
+    background-color: #FCEE21;
+    display: flex;
+    align-items: center;
+    padding: calc(var(--global-space) * .25) calc(var(--global-space) * .5);
+    margin-left: calc(var(--global-space) * 1);
+
+    &::before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 16px;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(#{$images-path}/icon-share.svg);
+      margin-right: calc(var(--global-space) * .5);
+    }
+  }
+}
+
+.Single {
+  &__ps {
+    font-family: Thonburi;
+    font-size: 16px;
+    color: #1A1A1A;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: Quark-Bold;
+      font-size: 28px;
+      color: #1A1A1A;
+      letter-spacing: 0.76px;
+
+      &:not(:first-child) {
+        margin-top: calc(var(--global-space) * 1.5);
+      }
+    }
+
+    > * {
+      &:not(:last-child) {
+        margin-bottom: calc(var(--global-space) * 1);
+      }
+    }
+
+    > p {
+      > img {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: calc(var(--global-space) * 1.5);
+        width: auto;
+        height: auto;
+      }
+
+      > small {
+        font-size: 14px;
+        display: block;
+        text-align: center;
+        margin-top: calc(var(--global-space) * -1.5);
+        padding: calc(var(--global-space) * .25) 0;
+      }
+    }
+
+    > blockquote {
+      background-color: #F3F3F3;
+      margin-top: calc(var(--global-space) * 1.5);
+      padding: calc(var(--global-space) * 1.5);
+      font-family: Quark-Light;
+      font-size: 28px;
+      color: #1A1A1A;
+      letter-spacing: 0.76px;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 18px;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(#{$images-path}/icon-quote.svg);
+        position: absolute;
+        top: 0;
+        left: calc(var(--global-space) * .75);
+        transform: translateY(-50%);
       }
     }
   }

@@ -79,8 +79,7 @@ svg {
   width: 100%; }
 
 #wpadminbar {
-  opacity: 0.4;
-  display: none; }
+  opacity: 0.4; }
 
 .container {
   width: 1170px;
@@ -131,17 +130,20 @@ svg {
         letter-spacing: 0.38px; }
         .Header__top__ul li:not(:last-child) {
           margin-right: calc(var(--global-space) * .5); }
-      .Header__top__ul__a::before {
-        content: '';
+      .Header__top__ul__a {
         display: block;
-        width: 16px;
-        height: 16px;
-        background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-image: url(/series/wp-content/themes/series/images/icon-facebook.svg); }
-      .Header__top__ul__a--twitter::before {
-        background-image: url(/series/wp-content/themes/series/images/icon-twitter.svg); }
+        transform: translateY(-1px); }
+        .Header__top__ul__a::before {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 16px;
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-image: url(/series/wp-content/themes/series/images/icon-facebook.svg); }
+        .Header__top__ul__a--twitter::before {
+          background-image: url(/series/wp-content/themes/series/images/icon-twitter.svg); }
     .Header__top__search {
       margin-left: calc(var(--global-space) * 1);
       display: flex;
@@ -159,6 +161,7 @@ svg {
         margin-right: calc(var(--global-space) * .5);
         text-align: right; }
       .Header__top__search button {
+        transform: translateY(-1px);
         background-color: transparent;
         border: none;
         flex: 0 0 16px;
@@ -301,6 +304,8 @@ svg {
 .Sidebar {
   flex: 0 0 300px;
   margin-left: calc(var(--global-space) * 3); }
+  .Sidebar > *:not(:last-child) {
+    margin-bottom: calc(var(--global-space) * 3); }
   .Sidebar__h2 {
     font-family: Phenomena-Bold;
     font-size: 20px;
@@ -342,7 +347,6 @@ svg {
           color: #1A1A1A;
           letter-spacing: 0.32px; }
   .Sidebar__ads {
-    margin-top: calc(var(--global-space) * 3);
     padding: calc(var(--global-space) * 1);
     background-color: #F3F3F3; }
 
@@ -467,5 +471,119 @@ svg {
         display: block; }
       .Pagination .pagination .nav-links .page-numbers.prev::after {
         display: none; }
+
+.HeroPost {
+  margin-bottom: calc(var(--global-space) * 3); }
+  .HeroPost .container {
+    display: flex;
+    align-items: center; }
+  .HeroPost__left {
+    flex: 1; }
+    .HeroPost__left__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+  .HeroPost__right {
+    flex: 0 0 570px;
+    margin-left: calc(var(--global-space) * 3); }
+    .HeroPost__right img {
+      width: 100%;
+      object-fit: cover; }
+  .HeroPost__ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .HeroPost__ul > *:not(:last-child) {
+      margin-right: calc(var(--global-space) * .5); }
+    .HeroPost__ul__a {
+      display: flex;
+      align-items: center;
+      border: 2px solid #3CD8CF;
+      padding: calc(var(--global-space) * .15) calc(var(--global-space) * .5);
+      font-family: Phenomena-Bold;
+      font-size: 14px;
+      color: #3CD8CF;
+      letter-spacing: 1px; }
+      .HeroPost__ul__a::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: #3CD8CF;
+        border-radius: 50%;
+        margin-right: calc(var(--global-space) * .35); }
+  .HeroPost__h2 {
+    font-family: Quark-Bold;
+    font-size: 36px;
+    color: #1A1A1A;
+    letter-spacing: 0.97px;
+    margin: calc(var(--global-space) * 1.5) 0 calc(var(--global-space) * 1.5); }
+  .HeroPost__share {
+    font-family: Quark-Bold;
+    font-size: 14px;
+    color: #1A1A1A;
+    letter-spacing: 0.38px;
+    background-color: #FCEE21;
+    display: flex;
+    align-items: center;
+    padding: calc(var(--global-space) * .25) calc(var(--global-space) * .5);
+    margin-left: calc(var(--global-space) * 1); }
+    .HeroPost__share::before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 16px;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(/series/wp-content/themes/series/images/icon-share.svg);
+      margin-right: calc(var(--global-space) * .5); }
+
+.Single__ps {
+  font-family: Thonburi;
+  font-size: 16px;
+  color: #1A1A1A; }
+  .Single__ps h1, .Single__ps h2, .Single__ps h3, .Single__ps h4, .Single__ps h5, .Single__ps h6 {
+    font-family: Quark-Bold;
+    font-size: 28px;
+    color: #1A1A1A;
+    letter-spacing: 0.76px; }
+    .Single__ps h1:not(:first-child), .Single__ps h2:not(:first-child), .Single__ps h3:not(:first-child), .Single__ps h4:not(:first-child), .Single__ps h5:not(:first-child), .Single__ps h6:not(:first-child) {
+      margin-top: calc(var(--global-space) * 1.5); }
+  .Single__ps > *:not(:last-child) {
+    margin-bottom: calc(var(--global-space) * 1); }
+  .Single__ps > p > img {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: calc(var(--global-space) * 1.5);
+    width: auto;
+    height: auto; }
+  .Single__ps > p > small {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: calc(var(--global-space) * -1.5);
+    padding: calc(var(--global-space) * .25) 0; }
+  .Single__ps > blockquote {
+    background-color: #F3F3F3;
+    margin-top: calc(var(--global-space) * 1.5);
+    padding: calc(var(--global-space) * 1.5);
+    font-family: Quark-Light;
+    font-size: 28px;
+    color: #1A1A1A;
+    letter-spacing: 0.76px;
+    position: relative; }
+    .Single__ps > blockquote::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 18px;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(/series/wp-content/themes/series/images/icon-quote.svg);
+      position: absolute;
+      top: 0;
+      left: calc(var(--global-space) * .75);
+      transform: translateY(-50%); }
 
 /*# sourceMappingURL=style.css.map */
