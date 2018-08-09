@@ -1,10 +1,8 @@
 <?php
-  $args = array(
+  $posts_array = get_posts(array(
     'posts_per_page' => 1,
     'category_name' => 'featured',
-  );
-
-  $posts_array = get_posts($args);
+  ));
 ?>
 
 <?php if (count($posts_array) > 0) { ?>
@@ -84,22 +82,31 @@
     </div>
 
     <div class="Sidebar">
-      <div class="Sidebar__box">
-        <h2 class="Sidebar__h2">Series top 5</h2>
+      <?php
+        $sidebar_posts = get_posts(array(
+          'posts_per_page' => 5,
+          'category_name' => 'featured',
+        ));
+      ?>
 
-        <ul class="Sidebar__ul">
-          <?php for ($i = 0; $i < 5; $i++) { ?>
-            <li class="Sidebar__ul__li">
-              <div class="Sidebar__ul__li__wrapper">
-                <h4 class="Sidebar__ul__li__h4">Apple Watch + AI = เครื่องตรวจจับสัญญาณโรคเบาหวานบนข้อมือ</h4>
-                <ul class="Sidebar__ul__li__ul">
-                  <li class="Sidebar__ul__li__ul__li">By <strong>Allen Thomas</strong></li>
-                </ul>
-              </div>
-            </li>
-          <?php } ?>
-        </ul>
-      </div>
+      <?php if (count($sidebar_posts) > 0) { ?>
+        <div class="Sidebar__box">
+          <h2 class="Sidebar__h2">Series featured articles</h2>
+
+          <ul class="Sidebar__ul">
+            <?php foreach ($sidebar_posts as $post) : setup_postdata($post); ?>
+              <li class="Sidebar__ul__li">
+                <div class="Sidebar__ul__li__wrapper">
+                  <h4 class="Sidebar__ul__li__h4"><?php the_title() ?></h4>
+                  <ul class="Sidebar__ul__li__ul">
+                    <li class="Sidebar__ul__li__ul__li">By <strong><?php the_author() ?></strong></li>
+                  </ul>
+                </div>
+              </li>
+            <?php endforeach; wp_reset_postdata(); ?>
+          </ul>
+        </div>
+      <?php } ?>
 
       <div class="Sidebar__box">
         <div class="Sidebar__ads">
