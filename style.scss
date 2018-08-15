@@ -651,7 +651,7 @@ svg {
   }
 
   .container {
-    @media (max-width: $screen-mobiles) {
+    @media (max-width: $screen-tablets-l) {
       position: relative;
     }
   }
@@ -700,7 +700,7 @@ svg {
     grid-gap: calc(var(--global-space) * 2);
     align-items: center;
 
-    @media (max-width: $screen-mobiles) {
+    @media (max-width: $screen-tablets-l) {
       margin-top: calc(var(--global-space) * 1);
       display: block;
     }
@@ -740,7 +740,7 @@ svg {
         display: flex;
         align-items: center;
 
-        @media (max-width: $screen-mobiles) {
+        @media (max-width: $screen-tablets-l) {
           position: absolute;
           top: calc(var(--global-space) * .25);
           right: calc(var(--global-space) * 1);
@@ -775,7 +775,7 @@ svg {
       line-height: 1;
       padding-left: calc(var(--global-space) * 1);
 
-      @media (max-width: $screen-mobiles) {
+      @media (max-width: $screen-tablets-l) {
         margin-top: calc(var(--global-space) * 2);
         margin-bottom: calc(var(--global-space) * 1);
       }
@@ -1071,6 +1071,10 @@ svg {
     border-bottom: 1px solid rgba(#1A1A1A, 0.2);
     display: flex;
     align-items: flex-end;
+
+    @media (max-width: $screen-mobiles) {
+      padding-bottom: calc(var(--global-space) * .5);
+    }
   }
 
   &__h2 {
@@ -1079,6 +1083,10 @@ svg {
     color: #1A1A1A;
     letter-spacing: 2.1px;
     text-shadow: 2px 0 0 #D3D3D3;
+
+    @media (max-width: $screen-mobiles) {
+      display: none;
+    }
   }
 
   &__p {
@@ -1090,16 +1098,22 @@ svg {
     align-items: center;
     margin-left: calc(var(--global-space) * .5);
 
-    &[class*='--'] {
-      &::before {
-        content: '';
-        display: block;
-        width: 6px;
-        height: 6px;
-        background-color: #46D7CE;;
-        border-radius: 50%;
-        margin-right: calc(var(--global-space) * .35);
-      }
+    @media (max-width: $screen-mobiles) {
+      margin-left: 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: #1A1A1A;
+      border-radius: 50%;
+      margin-right: calc(var(--global-space) * .35);
+    }
+
+    &--news::before {
+      background-color: #46D7CE;
     }
 
     &--reports::before {
@@ -1114,6 +1128,11 @@ svg {
   align-items: flex-start;
   grid-template-columns: 350px 1fr;
   grid-gap: calc(var(--global-space) * 7);
+
+  @media (max-width: $screen-tablets) {
+    grid-template-columns: 1fr;
+    grid-gap: calc(var(--global-space));
+  }
 
   &__left {
     display: flex;
@@ -1146,6 +1165,10 @@ svg {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: calc(var(--global-space) * 1);
 
+      @media (max-width: $screen-mobiles) {
+        grid-template-columns: 1fr;
+      }
+
       &__label {
         display: block;
         font-family: Quark-Bold;
@@ -1155,6 +1178,10 @@ svg {
 
         &--full {
           grid-column: 1 / 3;
+
+          @media (max-width: $screen-mobiles) {
+            grid-column: initial;
+          }
         }
 
         .label {
@@ -1183,6 +1210,15 @@ svg {
 
       &__submit {
         margin-top: calc(var(--global-space) * 1);
+        grid-column: 1 / 3;
+
+        @media (max-width: $screen-tablets) {
+          text-align: center;
+        }
+
+        @media (max-width: $screen-mobiles) {
+          grid-column: initial;
+        }
 
         .wpcf7-submit {
           background-color: #1A1A1A;

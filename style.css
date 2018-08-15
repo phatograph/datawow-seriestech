@@ -454,7 +454,7 @@ svg {
       padding-top: calc(var(--global-space) * 1.5);
       padding-bottom: calc(var(--global-space) * 1.5);
       margin-top: calc(var(--global-space) * 2); } }
-  @media (max-width: 580px) {
+  @media (max-width: 1100px) {
     .Footer .container {
       position: relative; } }
   .Footer__header {
@@ -490,7 +490,7 @@ svg {
     grid-template-columns: 1fr max-content max-content;
     grid-gap: calc(var(--global-space) * 2);
     align-items: center; }
-    @media (max-width: 580px) {
+    @media (max-width: 1100px) {
       .Footer__footer {
         margin-top: calc(var(--global-space) * 1);
         display: block; } }
@@ -516,7 +516,7 @@ svg {
       .Footer__footer__nav__right {
         display: flex;
         align-items: center; }
-        @media (max-width: 580px) {
+        @media (max-width: 1100px) {
           .Footer__footer__nav__right {
             position: absolute;
             top: calc(var(--global-space) * .25);
@@ -541,7 +541,7 @@ svg {
       border-left: 2px solid #fff;
       line-height: 1;
       padding-left: calc(var(--global-space) * 1); }
-      @media (max-width: 580px) {
+      @media (max-width: 1100px) {
         .Footer__footer__ul {
           margin-top: calc(var(--global-space) * 2);
           margin-bottom: calc(var(--global-space) * 1); } }
@@ -740,12 +740,18 @@ svg {
   border-bottom: 1px solid rgba(26, 26, 26, 0.2);
   display: flex;
   align-items: flex-end; }
+  @media (max-width: 580px) {
+    .CategoryHeader__wrapper {
+      padding-bottom: calc(var(--global-space) * .5); } }
 .CategoryHeader__h2 {
   font-family: Phenomena-Bold;
   font-size: 28px;
   color: #1A1A1A;
   letter-spacing: 2.1px;
   text-shadow: 2px 0 0 #D3D3D3; }
+  @media (max-width: 580px) {
+    .CategoryHeader__h2 {
+      display: none; } }
 .CategoryHeader__p {
   font-family: Quark-Light;
   font-size: 18px;
@@ -754,14 +760,19 @@ svg {
   display: flex;
   align-items: center;
   margin-left: calc(var(--global-space) * .5); }
-  .CategoryHeader__p[class*='--']::before {
+  @media (max-width: 580px) {
+    .CategoryHeader__p {
+      margin-left: 0; } }
+  .CategoryHeader__p::before {
     content: '';
     display: block;
     width: 6px;
     height: 6px;
-    background-color: #46D7CE;
+    background-color: #1A1A1A;
     border-radius: 50%;
     margin-right: calc(var(--global-space) * .35); }
+  .CategoryHeader__p--news::before {
+    background-color: #46D7CE; }
   .CategoryHeader__p--reports::before {
     background-color: #FCEE21; }
 
@@ -771,6 +782,10 @@ svg {
   align-items: flex-start;
   grid-template-columns: 350px 1fr;
   grid-gap: calc(var(--global-space) * 7); }
+  @media (max-width: 900px) {
+    .Contact {
+      grid-template-columns: 1fr;
+      grid-gap: calc(var(--global-space)); } }
   .Contact__left {
     display: flex;
     flex-wrap: wrap;
@@ -792,6 +807,9 @@ svg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: calc(var(--global-space) * 1); }
+    @media (max-width: 580px) {
+      .Contact__right__form {
+        grid-template-columns: 1fr; } }
     .Contact__right__form__label {
       display: block;
       font-family: Quark-Bold;
@@ -800,6 +818,9 @@ svg {
       letter-spacing: 0.43px; }
       .Contact__right__form__label--full {
         grid-column: 1 / 3; }
+        @media (max-width: 580px) {
+          .Contact__right__form__label--full {
+            grid-column: initial; } }
       .Contact__right__form__label .label {
         display: block;
         margin-bottom: calc(var(--global-space) * .25); }
@@ -816,7 +837,14 @@ svg {
         font-size: 11px;
         margin-top: calc(var(--global-space) * .25); }
     .Contact__right__form__submit {
-      margin-top: calc(var(--global-space) * 1); }
+      margin-top: calc(var(--global-space) * 1);
+      grid-column: 1 / 3; }
+      @media (max-width: 900px) {
+        .Contact__right__form__submit {
+          text-align: center; } }
+      @media (max-width: 580px) {
+        .Contact__right__form__submit {
+          grid-column: initial; } }
       .Contact__right__form__submit .wpcf7-submit {
         background-color: #1A1A1A;
         font-family: Quark-Bold;
