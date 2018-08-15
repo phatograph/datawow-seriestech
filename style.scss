@@ -157,6 +157,10 @@ svg {
 .Header {
   padding: calc(var(--global-space) * 3) 0;
 
+  @media (max-width: $screen-tablets) {
+    padding: calc(var(--global-space) * 2.5) 0 calc(var(--global-space) * 1.5);
+  }
+
   @media (max-width: $screen-mobiles) {
     padding: calc(var(--global-space) * 1.5) 0 calc(var(--global-space) * 1.5);
   }
@@ -886,13 +890,28 @@ svg {
 .HeroPost {
   margin-bottom: calc(var(--global-space) * 3);
 
+  @media (max-width: $screen-tablets) {
+    margin-bottom: calc(var(--global-space) * 1.5);
+  }
+
   .container {
     display: flex;
     align-items: center;
+
+    @media (max-width: $screen-tablets) {
+      display: grid;
+      grid-gap: calc(var(--global-space) * 1);
+    }
   }
 
   &__left {
     flex: 1;
+
+    @media (max-width: $screen-tablets) {
+      order: 2;
+      border-bottom: 1px solid rgba(#1A1A1A, 0.2);
+      padding-bottom: calc(var(--global-space) * 1);
+    }
 
     &__footer {
       display: flex;
@@ -904,6 +923,10 @@ svg {
   &__right {
     flex: 0 0 570px;
     margin-left: calc(var(--global-space) * 3);
+
+    @media (max-width: $screen-tablets) {
+      margin-left: 0;
+    }
 
     img {
       width: 100%;
@@ -917,6 +940,11 @@ svg {
     color: #1A1A1A;
     letter-spacing: 0.97px;
     margin: calc(var(--global-space) * 1.5) 0 calc(var(--global-space) * 1.5);
+
+    @media (max-width: $screen-tablets) {
+      margin: calc(var(--global-space) * .75) 0;
+      font-size: 24px;
+    }
   }
 
   &__share {
@@ -950,11 +978,19 @@ svg {
     font-size: 16px;
     color: #1A1A1A;
 
+    @media (max-width: $screen-mobiles) {
+      font-size: 14px;
+    }
+
     h1, h2, h3, h4, h5, h6 {
       font-family: Quark-Bold;
       font-size: 28px;
       color: #1A1A1A;
       letter-spacing: 0.76px;
+
+      @media (max-width: $screen-mobiles) {
+        font-size: 20px;
+      }
 
       &:not(:first-child) {
         margin-top: calc(var(--global-space) * 1.5);
@@ -964,6 +1000,10 @@ svg {
     > * {
       &:not(:last-child) {
         margin-bottom: calc(var(--global-space) * 1);
+
+        @media (max-width: $screen-mobiles) {
+          margin-bottom: calc(var(--global-space) * .75);
+        }
       }
     }
 
@@ -982,6 +1022,10 @@ svg {
         text-align: center;
         margin-top: calc(var(--global-space) * -1.5);
         padding: calc(var(--global-space) * .25) 0;
+
+        @media (max-width: $screen-mobiles) {
+          font-size: 11px;
+        }
       }
     }
 
@@ -994,6 +1038,10 @@ svg {
       color: #1A1A1A;
       letter-spacing: 0.76px;
       position: relative;
+
+      @media (max-width: $screen-mobiles) {
+        font-size: 20px;
+      }
 
       &::before {
         content: '';

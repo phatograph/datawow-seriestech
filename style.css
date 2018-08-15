@@ -108,6 +108,9 @@ svg {
 
 .Header {
   padding: calc(var(--global-space) * 3) 0; }
+  @media (max-width: 900px) {
+    .Header {
+      padding: calc(var(--global-space) * 2.5) 0 calc(var(--global-space) * 1.5); } }
   @media (max-width: 580px) {
     .Header {
       padding: calc(var(--global-space) * 1.5) 0 calc(var(--global-space) * 1.5); } }
@@ -606,11 +609,23 @@ svg {
 
 .HeroPost {
   margin-bottom: calc(var(--global-space) * 3); }
+  @media (max-width: 900px) {
+    .HeroPost {
+      margin-bottom: calc(var(--global-space) * 1.5); } }
   .HeroPost .container {
     display: flex;
     align-items: center; }
+    @media (max-width: 900px) {
+      .HeroPost .container {
+        display: grid;
+        grid-gap: calc(var(--global-space) * 1); } }
   .HeroPost__left {
     flex: 1; }
+    @media (max-width: 900px) {
+      .HeroPost__left {
+        order: 2;
+        border-bottom: 1px solid rgba(26, 26, 26, 0.2);
+        padding-bottom: calc(var(--global-space) * 1); } }
     .HeroPost__left__footer {
       display: flex;
       align-items: center;
@@ -618,6 +633,9 @@ svg {
   .HeroPost__right {
     flex: 0 0 570px;
     margin-left: calc(var(--global-space) * 3); }
+    @media (max-width: 900px) {
+      .HeroPost__right {
+        margin-left: 0; } }
     .HeroPost__right img {
       width: 100%;
       object-fit: cover; }
@@ -627,6 +645,10 @@ svg {
     color: #1A1A1A;
     letter-spacing: 0.97px;
     margin: calc(var(--global-space) * 1.5) 0 calc(var(--global-space) * 1.5); }
+    @media (max-width: 900px) {
+      .HeroPost__h2 {
+        margin: calc(var(--global-space) * .75) 0;
+        font-size: 24px; } }
   .HeroPost__share {
     font-family: Quark-Bold;
     font-size: 14px;
@@ -652,15 +674,24 @@ svg {
   font-family: Thonburi;
   font-size: 16px;
   color: #1A1A1A; }
+  @media (max-width: 580px) {
+    .Single__ps {
+      font-size: 14px; } }
   .Single__ps h1, .Single__ps h2, .Single__ps h3, .Single__ps h4, .Single__ps h5, .Single__ps h6 {
     font-family: Quark-Bold;
     font-size: 28px;
     color: #1A1A1A;
     letter-spacing: 0.76px; }
+    @media (max-width: 580px) {
+      .Single__ps h1, .Single__ps h2, .Single__ps h3, .Single__ps h4, .Single__ps h5, .Single__ps h6 {
+        font-size: 20px; } }
     .Single__ps h1:not(:first-child), .Single__ps h2:not(:first-child), .Single__ps h3:not(:first-child), .Single__ps h4:not(:first-child), .Single__ps h5:not(:first-child), .Single__ps h6:not(:first-child) {
       margin-top: calc(var(--global-space) * 1.5); }
   .Single__ps > *:not(:last-child) {
     margin-bottom: calc(var(--global-space) * 1); }
+    @media (max-width: 580px) {
+      .Single__ps > *:not(:last-child) {
+        margin-bottom: calc(var(--global-space) * .75); } }
   .Single__ps > p > img {
     margin-right: auto;
     margin-left: auto;
@@ -673,6 +704,9 @@ svg {
     text-align: center;
     margin-top: calc(var(--global-space) * -1.5);
     padding: calc(var(--global-space) * .25) 0; }
+    @media (max-width: 580px) {
+      .Single__ps > p > small {
+        font-size: 11px; } }
   .Single__ps > blockquote {
     background-color: #F3F3F3;
     margin-top: calc(var(--global-space) * 1.5);
@@ -682,6 +716,9 @@ svg {
     color: #1A1A1A;
     letter-spacing: 0.76px;
     position: relative; }
+    @media (max-width: 580px) {
+      .Single__ps > blockquote {
+        font-size: 20px; } }
     .Single__ps > blockquote::before {
       content: '';
       display: block;
