@@ -158,7 +158,7 @@ svg {
   padding: calc(var(--global-space) * 3) 0;
 
   @media (max-width: $screen-mobiles) {
-    padding: calc(var(--global-space) * 2) 0 calc(var(--global-space) * .5);
+    padding: calc(var(--global-space) * 1.5) 0 calc(var(--global-space) * 1.5);
   }
 
   .container {
@@ -301,6 +301,7 @@ svg {
   margin-bottom: calc(var(--global-space) * 3);
 
   @media (max-width: $screen-mobiles) {
+    margin-top: calc(var(--global-space) * -1);
     margin-bottom: calc(var(--global-space) * 1.5);
   }
 }
@@ -313,8 +314,13 @@ svg {
   --post-read-more-d: inline-flex;
   --post-h3-fz: 28px;
   --post-details-d: flex;
+  --post-time-fz: 12px;
   display: flex;
   align-items: flex-start;
+
+  @media (max-width: $screen-tablets) {
+    --post-img-mr: calc(var(--global-space) * 1.5);
+  }
 
   @media (max-width: $screen-mobiles) {
     --post-h3-fz: 16px;
@@ -334,6 +340,7 @@ svg {
       --post-read-more-d: none;
       --post-h3-fz: 24px;
       --post-details-d: flex;
+      --post-time-fz: 14px;
       display: block;
       padding-bottom: calc(var(--global-space) * 1);
     }
@@ -346,6 +353,10 @@ svg {
     margin-bottom: var(--post-img-mb);
 
     @media (max-width: $screen-tablets) {
+      flex: 0 0 180px;
+    }
+
+    @media (max-width: $screen-mobiles) {
       flex: 0 0 80px;
     }
 
@@ -380,11 +391,15 @@ svg {
 
   &__time {
     font-family: Quark-Light;
-    font-size: 14px;
+    font-size: var(--post-time-fz);
     color: #1A1A1A;
     letter-spacing: 0.38px;
-    display: flex;
+    display: none;
     align-items: center;
+
+    @media (max-width: $screen-mobiles) {
+      display: flex;
+    }
 
     time {
       display: block;

@@ -110,7 +110,7 @@ svg {
   padding: calc(var(--global-space) * 3) 0; }
   @media (max-width: 580px) {
     .Header {
-      padding: calc(var(--global-space) * 2) 0 calc(var(--global-space) * .5); } }
+      padding: calc(var(--global-space) * 1.5) 0 calc(var(--global-space) * 1.5); } }
   .Header .container {
     position: relative; }
   .Header__top {
@@ -212,6 +212,7 @@ svg {
   margin-bottom: calc(var(--global-space) * 3); }
   @media (max-width: 580px) {
     .Hero {
+      margin-top: calc(var(--global-space) * -1);
       margin-bottom: calc(var(--global-space) * 1.5); } }
 
 .Post {
@@ -222,8 +223,12 @@ svg {
   --post-read-more-d: inline-flex;
   --post-h3-fz: 28px;
   --post-details-d: flex;
+  --post-time-fz: 12px;
   display: flex;
   align-items: flex-start; }
+  @media (max-width: 900px) {
+    .Post {
+      --post-img-mr: calc(var(--global-space) * 1.5); } }
   @media (max-width: 580px) {
     .Post {
       --post-h3-fz: 16px;
@@ -241,6 +246,7 @@ svg {
         --post-read-more-d: none;
         --post-h3-fz: 24px;
         --post-details-d: flex;
+        --post-time-fz: 14px;
         display: block;
         padding-bottom: calc(var(--global-space) * 1); } }
   .Post__img {
@@ -249,6 +255,9 @@ svg {
     margin-right: var(--post-img-mr);
     margin-bottom: var(--post-img-mb); }
     @media (max-width: 900px) {
+      .Post__img {
+        flex: 0 0 180px; } }
+    @media (max-width: 580px) {
       .Post__img {
         flex: 0 0 80px; } }
     .Post__img img {
@@ -270,11 +279,14 @@ svg {
       margin-bottom: calc(var(--global-space) * .5); }
   .Post__time {
     font-family: Quark-Light;
-    font-size: 14px;
+    font-size: var(--post-time-fz);
     color: #1A1A1A;
     letter-spacing: 0.38px;
-    display: flex;
+    display: none;
     align-items: center; }
+    @media (max-width: 580px) {
+      .Post__time {
+        display: flex; } }
     .Post__time time {
       display: block;
       transform: translateY(1px); }
