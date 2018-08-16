@@ -1,25 +1,15 @@
 'use strict';
 
 var App = function App() {
-  var $loadMore = document.querySelector('.Content__L__dl__load-more');
+  var $mobileMenuHandle = document.querySelector('.MobileMenu__handle');
 
-  if ($loadMore) {
-    $loadMore.addEventListener('click', function () {
-      var $items = document.querySelectorAll('.Content__L__dl__item');
+  if ($mobileMenuHandle) {
+    $mobileMenuHandle.addEventListener('click', function () {
+      var $mobileMenuPanel = document.querySelector('.MobileMenu__panel');
+      var $layout = document.querySelector('.Layout');
 
-      if ($loadMore.classList.contains('Content__L__dl__load-more--active')) {
-        Array.prototype.forEach.call($items, function (x) {
-          x.classList.remove('Content__L__dl__item--active');
-        });
-
-        $loadMore.classList.remove('Content__L__dl__load-more--active');
-      } else {
-        Array.prototype.forEach.call($items, function (x) {
-          x.classList.add('Content__L__dl__item--active');
-        });
-
-        $loadMore.classList.add('Content__L__dl__load-more--active');
-      }
+      $mobileMenuPanel.classList.toggle('MobileMenu__panel--active');
+      $layout.classList.toggle('Layout--menu-open');
     });
   }
 };

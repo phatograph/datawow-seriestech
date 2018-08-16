@@ -33,8 +33,20 @@ Text Domain: series
   --ease-in-out-circ: cubic-bezier(.785, .135, .15, .86); }
 
 @font-face {
+  font-family: 'Phenomena-ExtraLight';
+  src: url(/series/wp-content/themes/series/fonts/Phenomena-ExtraLight.otf); }
+@font-face {
   font-family: 'Phenomena-Bold';
   src: url(/series/wp-content/themes/series/fonts/Phenomena-Bold.otf); }
+@font-face {
+  font-family: 'Quark-Light';
+  src: url(/series/wp-content/themes/series/fonts/Quark-Light.otf); }
+@font-face {
+  font-family: 'Quark-Bold';
+  src: url(/series/wp-content/themes/series/fonts/Quark-Bold.otf); }
+@font-face {
+  font-family: 'Thonburi';
+  src: url(/series/wp-content/themes/series/fonts/Thonburi.ttc); }
 html {
   box-sizing: border-box; }
 
@@ -86,7 +98,12 @@ svg {
 .Layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: 100vh;
+  position: relative; }
+  @media (max-width: 580px) {
+    .Layout--menu-open {
+      height: 100vh;
+      overflow: hidden; } }
 
 .H1__a {
   display: block;
@@ -104,7 +121,8 @@ svg {
   @media (max-width: 580px) {
     .H1__a {
       width: 130px;
-      height: 40px; } }
+      height: 40px;
+      transform: translateX(12px); } }
 
 .Header {
   padding: calc(var(--global-space) * 3) 0; }
@@ -356,7 +374,7 @@ svg {
         text-shadow: 1px 1px 0 #FCEE21; }
   .Post__p {
     display: var(--post-p-d);
-    font-family: Thonburi;
+    font-family: Thonburi, tahoma;
     font-size: 14px;
     color: #1A1A1A; }
   .Post__read-more {
@@ -671,7 +689,7 @@ svg {
       margin-right: calc(var(--global-space) * .5); }
 
 .Single__ps {
-  font-family: Thonburi;
+  font-family: Thonburi, tahoma;
   font-size: 16px;
   color: #1A1A1A; }
   @media (max-width: 580px) {
@@ -866,5 +884,89 @@ svg {
     color: red; }
   .Contact__right .wpcf7 form .wpcf7-mail-sent-ok {
     color: green; }
+
+.MobileMenu {
+  display: none; }
+  @media (max-width: 580px) {
+    .MobileMenu {
+      display: initial; } }
+  .MobileMenu__handle {
+    position: absolute;
+    top: calc(var(--global-space) * 1.25);
+    left: calc(var(--global-space) * 1);
+    display: block;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCEE21;
+    z-index: 2; }
+    .MobileMenu__handle::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 18px;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(/series/wp-content/themes/series/images/icon-menu.svg); }
+  .MobileMenu__panel {
+    grid-template-rows: max-content 1fr;
+    padding: calc(var(--global-space));
+    padding-top: 0;
+    position: fixed;
+    transition: opacity 0.4s;
+    will-change: opacity;
+    width: 100%;
+    height: calc(100vh);
+    top: 0;
+    z-index: 1;
+    background-color: #FCEE21;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    padding: calc(var(--global-space) * 1.5) 0 calc(var(--global-space) * 1.5);
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow: scroll; }
+    @media (max-width: 580px) {
+      .MobileMenu__panel {
+        padding-bottom: calc(var(--global-space) * 6); } }
+    @media (max-width: 900px) {
+      .MobileMenu__panel--active {
+        opacity: 1;
+        pointer-events: all; } }
+    @media (max-width: 580px) {
+      .MobileMenu__panel__menu {
+        margin-top: calc(var(--global-space) * 2); } }
+    .MobileMenu__panel__menu > * {
+      height: 100%; }
+    .MobileMenu__panel__menu .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%; }
+      .MobileMenu__panel__menu .menu > *:not(:last-child) {
+        margin-bottom: calc(var(--global-space) * 1.5); }
+      .MobileMenu__panel__menu .menu .menu-item a {
+        text-transform: uppercase;
+        font-family: Quark-Light;
+        font-size: 18px;
+        color: #1A1A1A;
+        letter-spacing: 1.5px;
+        display: block; }
+      .MobileMenu__panel__menu .menu .current-menu-item a {
+        font-family: Quark-Bold;
+        position: relative; }
+        .MobileMenu__panel__menu .menu .current-menu-item a::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #1A1A1A; }
 
 /*# sourceMappingURL=style.css.map */

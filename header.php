@@ -8,10 +8,10 @@
     <!-- <meta name="viewport" content="width=1440" /> -->
 
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" />
-    <!-- <link rel="stylesheet" href="http://192.168.3.52:8888/iroha/wp&#45;content/themes/iroha/style.css" /> -->
-
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/dist/script.js"></script>
-    <!-- <script src="http://192.168.3.52:8888/iroha/wp&#45;content/themes/iroha/js/dist/script.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="http://192.168.1.59:8888/series/wp&#45;content/themes/series/style.css" /> -->
+    <!-- <script src="http://192.168.1.59:8888/series/wp&#45;content/themes/series/js/dist/script.js"></script> -->
 
     <!-- START wp_head -->
     <?php #wp_head(); ?>
