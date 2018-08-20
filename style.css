@@ -34,19 +34,19 @@ Text Domain: series
 
 @font-face {
   font-family: 'Phenomena-ExtraLight';
-  src: url(/series/wp-content/themes/series/fonts/Phenomena-ExtraLight.otf); }
+  src: url(/wp-content/themes/seriestech/fonts/Phenomena-ExtraLight.otf); }
 @font-face {
   font-family: 'Phenomena-Bold';
-  src: url(/series/wp-content/themes/series/fonts/Phenomena-Bold.otf); }
+  src: url(/wp-content/themes/seriestech/fonts/Phenomena-Bold.otf); }
 @font-face {
   font-family: 'Quark-Light';
-  src: url(/series/wp-content/themes/series/fonts/Quark-Light.otf); }
+  src: url(/wp-content/themes/seriestech/fonts/Quark-Light.otf); }
 @font-face {
   font-family: 'Quark-Bold';
-  src: url(/series/wp-content/themes/series/fonts/Quark-Bold.otf); }
+  src: url(/wp-content/themes/seriestech/fonts/Quark-Bold.otf); }
 @font-face {
   font-family: 'Thonburi';
-  src: url(/series/wp-content/themes/series/fonts/Thonburi.ttc); }
+  src: url(/wp-content/themes/seriestech/fonts/Thonburi.ttc); }
 html {
   box-sizing: border-box; }
 
@@ -114,7 +114,7 @@ svg {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(/series/wp-content/themes/series/images/logo.svg);
+  background-image: url(/wp-content/themes/seriestech/images/logo.svg);
   transform: translateX(20px);
   margin-right: auto;
   margin-left: auto; }
@@ -168,9 +168,9 @@ svg {
           background-position: center center;
           background-size: contain;
           background-repeat: no-repeat;
-          background-image: url(/series/wp-content/themes/series/images/icon-facebook.svg); }
+          background-image: url(/wp-content/themes/seriestech/images/icon-facebook.svg); }
         .Header__top__ul__a--twitter::before {
-          background-image: url(/series/wp-content/themes/series/images/icon-twitter.svg); }
+          background-image: url(/wp-content/themes/seriestech/images/icon-twitter.svg); }
     .Header__top__search {
       margin-left: calc(var(--global-space) * 1);
       display: flex;
@@ -196,7 +196,7 @@ svg {
         background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;
-        background-image: url(/series/wp-content/themes/series/images/icon-search.svg); }
+        background-image: url(/wp-content/themes/seriestech/images/icon-search.svg); }
 
 .Nav {
   margin-top: calc(var(--global-space) * 1.5); }
@@ -486,7 +486,7 @@ svg {
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url(/series/wp-content/themes/series/images/logo-footer.svg);
+      background-image: url(/wp-content/themes/seriestech/images/logo-footer.svg);
       display: block; }
       @media (max-width: 580px) {
         .Footer__header__h1__a {
@@ -551,9 +551,9 @@ svg {
           background-position: center center;
           background-size: contain;
           background-repeat: no-repeat;
-          background-image: url(/series/wp-content/themes/series/images/icon-facebook-w.svg); }
+          background-image: url(/wp-content/themes/seriestech/images/icon-facebook-w.svg); }
         .Footer__footer__nav__a--twitter::before {
-          background-image: url(/series/wp-content/themes/series/images/icon-twitter-w.svg); }
+          background-image: url(/wp-content/themes/seriestech/images/icon-twitter-w.svg); }
     .Footer__footer__ul {
       display: flex;
       border-left: 2px solid #fff;
@@ -612,14 +612,14 @@ svg {
           background-position: center center;
           background-size: contain;
           background-repeat: no-repeat;
-          background-image: url(/series/wp-content/themes/series/images/icon-arrow-r.svg);
+          background-image: url(/wp-content/themes/seriestech/images/icon-arrow-r.svg);
           margin-left: calc(var(--global-space) * .5);
           transform: translateY(-1px); }
         .Pagination .pagination .nav-links .page-numbers.prev::before, .Pagination .pagination .nav-links .page-numbers.next::before {
           display: none;
           margin-left: 0;
           margin-right: calc(var(--global-space) * .5);
-          background-image: url(/series/wp-content/themes/series/images/icon-arrow-l.svg); }
+          background-image: url(/wp-content/themes/seriestech/images/icon-arrow-l.svg); }
       .Pagination .pagination .nav-links .page-numbers.prev::before {
         display: block; }
       .Pagination .pagination .nav-links .page-numbers.prev::after {
@@ -685,7 +685,7 @@ svg {
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url(/series/wp-content/themes/series/images/icon-share.svg);
+      background-image: url(/wp-content/themes/seriestech/images/icon-share.svg);
       margin-right: calc(var(--global-space) * .5); }
 
 .Single__ps {
@@ -745,7 +745,7 @@ svg {
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url(/series/wp-content/themes/series/images/icon-quote.svg);
+      background-image: url(/wp-content/themes/seriestech/images/icon-quote.svg);
       position: absolute;
       top: 0;
       left: calc(var(--global-space) * .75);
@@ -910,7 +910,7 @@ svg {
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url(/series/wp-content/themes/series/images/icon-menu.svg); }
+      background-image: url(/wp-content/themes/seriestech/images/icon-menu.svg); }
   .MobileMenu__panel {
     grid-template-rows: max-content 1fr;
     padding: calc(var(--global-space));
