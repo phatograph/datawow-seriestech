@@ -1,25 +1,13 @@
 const App = () => {
-  const $loadMore = document.querySelector('.Content__L__dl__load-more')
+  const $mobileMenuHandle = document.querySelector('.MobileMenu__handle')
 
-  if ($loadMore) {
-    $loadMore.addEventListener('click', () => {
-      const $items = document.querySelectorAll('.Content__L__dl__item')
+  if ($mobileMenuHandle) {
+    $mobileMenuHandle.addEventListener('click', () => {
+      const $mobileMenuPanel = document.querySelector('.MobileMenu__panel')
+      const $layout = document.querySelector('.Layout')
 
-      if ($loadMore.classList.contains('Content__L__dl__load-more--active')) {
-        Array.prototype.forEach.call($items, (x) => {
-          x.classList.remove('Content__L__dl__item--active')
-        })
-
-        $loadMore.classList.remove('Content__L__dl__load-more--active')
-      }
-
-      else {
-        Array.prototype.forEach.call($items, (x) => {
-          x.classList.add('Content__L__dl__item--active')
-        })
-
-        $loadMore.classList.add('Content__L__dl__load-more--active')
-      }
+      $mobileMenuPanel.classList.toggle('MobileMenu__panel--active')
+      $layout.classList.toggle('Layout--menu-open')
     })
   }
 }

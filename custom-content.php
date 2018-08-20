@@ -11,7 +11,7 @@
       <div class="container">
 
         <?php foreach ($posts_array as $post) : setup_postdata($post); ?>
-          <div class="Post">
+          <div class="Post Post--hero">
             <a class="Post__img" href="<?php the_permalink() ?>">
               <img src="<?php the_post_thumbnail_url(); ?>" />
             </a>
@@ -27,11 +27,15 @@
                     <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
                   </li>
                 <?php } ?>
+
+                <li class="Post__time"><time><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time></li>
               </ul>
+
               <h3 class="Post__h3"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+
               <ul class="Post__details">
                 <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
-                <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
+                <li class="Post__details__li Post__details__li--time"><time><?php echo get_the_date('F j, Y'); ?></time></li>
               </ul>
               <div class="Post__p"><?php the_excerpt(); ?></div>
               <a class="Post__read-more" href="<?php the_permalink() ?>">Continue reading</a>
@@ -84,6 +88,8 @@
             <div class="Post">
               <a class="Post__img" href="<?php the_permalink() ?>">
                 <img src="<?php the_post_thumbnail_url(); ?>" />
+
+                <span class="Post__img__by">by <strong><?php the_author() ?></strong></span>
               </a>
 
               <div class="Post__right">
@@ -99,11 +105,13 @@
                       </a>
                     </li>
                   <?php } ?>
+
+                  <li class="Post__time"><time><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time></li>
                 </ul>
                 <h3 class="Post__h3"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
                 <ul class="Post__details">
                   <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
-                  <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
+                  <li class="Post__details__li Post__details__li--time"><time><?php echo get_the_date('F j, Y'); ?></time></li>
                 </ul>
                 <div class="Post__p"><?php the_excerpt(); ?></div>
               </div>

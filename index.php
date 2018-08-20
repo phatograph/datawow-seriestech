@@ -1,6 +1,18 @@
 <?php get_header(); ?>
 
 <div class="Layout">
+  <div class="MobileMenu">
+    <a class="MobileMenu__handle"></a>
+
+    <div class="MobileMenu__panel">
+      <h1 class="H1"><a class="H1__a" href="<?php echo site_url(); ?>">Series.tech</a></h1>
+
+      <div class="MobileMenu__panel__menu">
+        <?php wp_nav_menu(array('theme_location' => 'mobile-menu')); ?>
+      </div>
+    </div>
+  </div>
+
   <div class="Header">
     <div class="container">
       <div class="Header__top">
@@ -39,8 +51,11 @@
       <div class='Footer__footer'>
         <div class="Footer__footer__nav">
           <?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?>
-          <a class="Footer__footer__nav__a"></a>
-          <a class="Footer__footer__nav__a Footer__footer__nav__a--twitter"></a>
+
+          <div class="Footer__footer__nav__right">
+            <a class="Footer__footer__nav__a"></a>
+            <a class="Footer__footer__nav__a Footer__footer__nav__a--twitter"></a>
+          </div>
         </div>
         <ul class="Footer__footer__ul">
           <li><a>Terms</a></li>
