@@ -1,5 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
 
+<?php setPostViews(get_the_ID()); ?>
+
 <div class="HeroPost">
   <div class="container">
     <div class="HeroPost__left">
@@ -7,13 +9,17 @@
         $post_categories = get_the_category()
       ?>
 
-      <ul class="Post__tags">
-        <?php foreach($post_categories as $category) { ?>
-          <li>
-            <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>" href><span><?php echo $category->name ?></span></a>
-          </li>
-        <?php } ?>
-      </ul>
+      <div class="Post__right__info">
+        <ul class="Post__tags">
+          <?php foreach($post_categories as $category) { ?>
+            <li>
+              <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>" href><span><?php echo $category->name ?></span></a>
+            </li>
+          <?php } ?>
+        </ul>
+
+        <p class="Post__right__info__views"><?php echo getPostViews(get_the_ID()); ?> views</p>
+      </div>
 
       <h2 class="HeroPost__h2"><?php the_title() ?></h2>
 

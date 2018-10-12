@@ -26,15 +26,19 @@
                 $post_categories = get_the_category()
               ?>
 
-              <ul class="Post__tags">
-                <?php foreach($post_categories as $category) { ?>
-                  <li>
-                    <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
-                  </li>
-                <?php } ?>
+              <div class="Post__right__info">
+                <ul class="Post__tags">
+                  <?php foreach($post_categories as $category) { ?>
+                    <li>
+                      <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>"><span><?php echo $category->name ?></span></a>
+                    </li>
+                  <?php } ?>
 
-                <li class="Post__time"><time><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time></li>
-              </ul>
+                  <li class="Post__time"><time><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time></li>
+                </ul>
+
+                <p class="Post__right__info__views"><?php echo getPostViews(get_the_ID()); ?></p>
+              </div>
 
               <h3 class="Post__h3"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
 
@@ -87,7 +91,7 @@
 <div class="Main">
   <div class="container">
     <div class="Content">
-      <?php if (have_posts()) : ?>
+      <?php if (have_posts()) { ?>
         <div class="Posts">
           <?php while (have_posts()) : the_post(); ?>
             <div class="Post <?php if (get_the_ID() == $featured_post_id) echo('Post--hidden'); ?>">
@@ -102,18 +106,24 @@
                   $post_categories = get_the_category()
                 ?>
 
-                <ul class="Post__tags">
-                  <?php foreach($post_categories as $category) { ?>
-                    <li>
-                      <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>" href="<?php echo site_url(); ?>/category/<?php echo $category->slug ?>">
-                        <span><?php echo $category->name ?></span>
-                      </a>
-                    </li>
-                  <?php } ?>
+                <div class="Post__right__info">
+                  <ul class="Post__tags">
+                    <?php foreach($post_categories as $category) { ?>
+                      <li>
+                        <a class="Post__tags__a Post__tags__a--<?php echo $category->slug ?>" href="<?php echo site_url(); ?>/category/<?php echo $category->slug ?>">
+                          <span><?php echo $category->name ?></span>
+                        </a>
+                      </li>
+                    <?php } ?>
 
-                  <li class="Post__time"><time><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time></li>
-                </ul>
+                    <li class="Post__time"><time><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time></li>
+                  </ul>
+
+                  <p class="Post__right__info__views"><?php echo getPostViews(get_the_ID()); ?></p>
+                </div>
+
                 <h3 class="Post__h3"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+
                 <ul class="Post__details">
                   <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
                   <li class="Post__details__li Post__details__li--time"><time><?php echo get_the_date('F j, Y'); ?></time></li>
@@ -123,7 +133,9 @@
             </div>
           <?php endwhile; ?>
         </div>
-      <?php endif; ?>
+      <?php } else { ?>
+        <p class="Placeholder">ขออภัย ไม่พบบทความที่คุณค้นหา</p>
+      <?php } ?>
 
       <div class="Pagination">
         <?php the_posts_pagination(array('mid_size' => 2, 'screen_reader_text' => '', 'prev_text' => 'Prev')); ?>

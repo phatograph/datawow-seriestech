@@ -304,6 +304,34 @@ svg {
           display: block; } }
   .Post__right {
     flex: 1; }
+    .Post__right__info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between; }
+      .Post__right__info__views {
+        font-family: Quark-Bold;
+        font-size: 14px;
+        color: #1A1A1A;
+        letter-spacing: 0.38px;
+        display: flex;
+        align-items: center;
+        transform: translateY(calc(var(--global-space) * -.125));
+        white-space: nowrap;
+        margin-top: calc(var(--global-space) * .5); }
+        @media (max-width: 580px) {
+          .Post__right__info__views {
+            margin-top: calc(var(--global-space) * .3); } }
+        .Post__right__info__views::before {
+          margin-right: calc(var(--global-space) * .35);
+          content: '';
+          display: block;
+          width: 16px;
+          height: 12px;
+          background-image: url(/wp-content/themes/seriestech/images/icon-views.svg);
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          transform: translateY(-1px); }
     .Post__right > *:not(:last-child) {
       margin-bottom: calc(var(--global-space) * .5); }
   .Post__time {
@@ -982,5 +1010,10 @@ svg {
           bottom: 0;
           left: 0;
           background-color: #1A1A1A; }
+
+.Placeholder {
+  font-family: Thonburi;
+  font-size: 16px;
+  color: #1A1A1A; }
 
 /*# sourceMappingURL=style.css.map */

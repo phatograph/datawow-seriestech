@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icons8-visible</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="News-series" transform="translate(-891.000000, -336.000000)" fill="#D3D3D3">
+            <g id="Group-2" transform="translate(135.000000, 243.000000)">
+                <g id="Group-2-Copy" transform="translate(0.000000, 86.000000)">
+                    <g id="Group" transform="translate(309.000000, 0.000000)">
+                        <g id="Group-17" transform="translate(447.000000, 5.000000)">
+                            <g id="icons8-visible" transform="translate(0.000000, 2.000000)">
+                                <path d="M8,0 C2.18181818,0 0,6 0,6 C0,6 2.18181818,12 8,12 C13.8181818,12 16,6 16,6 C16,6 13.8181818,0 8,0 Z M8,2.25 C10.008,2.25 11.6363636,3.92925 11.6363636,6 C11.6363636,8.07075 10.008,9.75 8,9.75 C5.992,9.75 4.36363636,8.07075 4.36363636,6 C4.36363636,3.92925 5.992,2.25 8,2.25 Z" id="Shape" fill-rule="nonzero"></path>
+                                <path d="M8,3.75 C6.79501509,3.75 5.81818182,4.75735931 5.81818182,6 C5.81818182,7.24264069 6.79501509,8.25 8,8.25 C9.20498491,8.25 10.1818182,7.24264069 10.1818182,6 C10.1818182,4.75735931 9.20498491,3.75 8,3.75 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
