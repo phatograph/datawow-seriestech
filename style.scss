@@ -257,19 +257,26 @@ svg {
       justify-content: flex-end;
       flex: 1;
 
-      input {
-        flex: 1;
+      &__input {
+        flex: 0 0 125px;
         border: none;
         outline: none;
         font-family: Quark-Light;
         font-size: 14px;
         color: #1A1A1A;
         letter-spacing: 1.17px;
-        margin-right: calc(var(--global-space) * .5);
+        margin-right: calc(var(--global-space) * .25);
         text-align: right;
+        padding: calc(var(--global-space) * .1) calc(var(--global-space) * .25);
+        line-height: 1.5;
+
+        &--active {
+          background-color: #FAF5AA;
+        }
       }
 
       button {
+        outline: none;
         transform: translateY(-1px);
         background-color: transparent;
         border: none;
@@ -462,7 +469,7 @@ svg {
     }
 
     &__a {
-      --post-tags-a-c: #FCEE21;
+      --post-tags-a-c: #e8dd40;
       display: flex;
       align-items: center;
       padding: calc(var(--global-space) * .25) calc(var(--global-space) * .5);
@@ -1120,6 +1127,14 @@ svg {
 
     @media (max-width: $screen-mobiles) {
       display: none;
+    }
+
+    &__search {
+      font-family: Phenomena-Bold;
+      font-size: 28px;
+      color: #1A1A1A;
+      letter-spacing: 2.1px;
+      text-shadow: 2px 2px 0 #FCEE21;
     }
   }
 

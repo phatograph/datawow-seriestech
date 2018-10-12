@@ -178,17 +178,22 @@ svg {
       align-items: center;
       justify-content: flex-end;
       flex: 1; }
-      .Header__top__search input {
-        flex: 1;
+      .Header__top__search__input {
+        flex: 0 0 125px;
         border: none;
         outline: none;
         font-family: Quark-Light;
         font-size: 14px;
         color: #1A1A1A;
         letter-spacing: 1.17px;
-        margin-right: calc(var(--global-space) * .5);
-        text-align: right; }
+        margin-right: calc(var(--global-space) * .25);
+        text-align: right;
+        padding: calc(var(--global-space) * .1) calc(var(--global-space) * .25);
+        line-height: 1.5; }
+        .Header__top__search__input--active {
+          background-color: #FAF5AA; }
       .Header__top__search button {
+        outline: none;
         transform: translateY(-1px);
         background-color: transparent;
         border: none;
@@ -325,7 +330,7 @@ svg {
       .Post__tags > *:not(:last-child) {
         margin-right: calc(var(--global-space) * .5); }
     .Post__tags__a {
-      --post-tags-a-c: #FCEE21;
+      --post-tags-a-c: #e8dd40;
       display: flex;
       align-items: center;
       padding: calc(var(--global-space) * .25) calc(var(--global-space) * .5);
@@ -773,6 +778,12 @@ svg {
   @media (max-width: 580px) {
     .CategoryHeader__h2 {
       display: none; } }
+  .CategoryHeader__h2__search {
+    font-family: Phenomena-Bold;
+    font-size: 28px;
+    color: #1A1A1A;
+    letter-spacing: 2.1px;
+    text-shadow: 2px 2px 0 #FCEE21; }
 .CategoryHeader__p {
   font-family: Quark-Light;
   font-size: 18px;

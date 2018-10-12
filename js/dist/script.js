@@ -12,6 +12,18 @@ var App = function App() {
       $layout.classList.toggle('Layout--menu-open');
     });
   }
+
+  var $searchForm = document.querySelector('.Header__top__search');
+
+  if ($searchForm) {
+    $searchForm.addEventListener('submit', function (e) {
+      if (!e.target.elements.s.value) {
+        e.preventDefault();
+
+        document.querySelector('.Header__top__search__input').classList.add('Header__top__search__input--active');
+      }
+    });
+  }
 };
 
 document.addEventListener('DOMContentLoaded', App, false);

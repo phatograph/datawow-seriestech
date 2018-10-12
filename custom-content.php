@@ -78,7 +78,7 @@
   <div class="CategoryHeader">
     <div class="container">
       <div class="CategoryHeader__wrapper">
-        <h2 class="CategoryHeader__h2">Search results for: <?php the_search_query() ?></h2>
+        <h2 class="CategoryHeader__h2">Search results for: <span class="CategoryHeader__h2__search"><?php the_search_query() ?></span></h2>
       </div>
     </div>
   </div>

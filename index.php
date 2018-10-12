@@ -23,7 +23,13 @@
         </ul>
 
         <form class="Header__top__search" action="<?php echo site_url(); ?>">
-          <input type="text" placeholder="Search and enter" name="s" />
+          <input
+            type="text"
+            placeholder="Search and enter"
+            name="s"
+            value="<?php the_search_query() ?>"
+            class="Header__top__search__input"
+          />
           <button type="submit"></button>
         </form>
       </div>
