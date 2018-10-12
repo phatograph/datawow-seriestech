@@ -1,16 +1,21 @@
 <?php if (is_home() && !is_paged()) { ?>
   <?php
-    $posts_array = get_posts(array(
+    $featured_post_id = null;
+    $hero_post = get_posts(array(
       'posts_per_page' => 1,
       'category_name' => 'featured',
     ));
   ?>
 
-  <?php if (count($posts_array) > 0) { ?>
+  <?php if (count($hero_post) > 0) { ?>
     <div class="Hero">
       <div class="container">
 
-        <?php foreach ($posts_array as $post) : setup_postdata($post); ?>
+        <?php foreach ($hero_post as $post) : setup_postdata($post); ?>
+          <?php
+            $featured_post_id = get_the_ID();
+          ?>
+
           <div class="Post Post--hero">
             <a class="Post__img" href="<?php the_permalink() ?>">
               <img src="<?php the_post_thumbnail_url(); ?>" />
@@ -82,9 +87,14 @@
 <div class="Main">
   <div class="container">
     <div class="Content">
-      <?php if (have_posts()) : ?>
+      <?php
+        set_query_var('post__not_in', array($featured_post_id));
+        $posts = get_posts($wp_query->query_vars);
+      ?>
+
+      <?php if (count($posts)) : ?>
         <div class="Posts">
-          <?php while (have_posts()) : the_post(); ?>
+          <?php foreach ($posts as $post) : setup_postdata($post); ?>
             <div class="Post">
               <a class="Post__img" href="<?php the_permalink() ?>">
                 <img src="<?php the_post_thumbnail_url(); ?>" />
@@ -116,7 +126,7 @@
                 <div class="Post__p"><?php the_excerpt(); ?></div>
               </div>
             </div>
-          <?php endwhile; ?>
+          <?php endforeach; wp_reset_postdata(); ?>
         </div>
       <?php endif; ?>
 
