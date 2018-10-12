@@ -46,7 +46,7 @@
                 <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
                 <li class="Post__details__li Post__details__li--time"><time><?php echo get_the_date('F j, Y'); ?></time></li>
               </ul>
-              <div class="Post__p"><?php the_excerpt(); ?></div>
+              <a class="Post__p" href="<?php the_permalink() ?>"><?php the_excerpt(); ?></a>
               <a class="Post__read-more" href="<?php the_permalink() ?>">Continue reading</a>
             </div>
           </div>
@@ -128,7 +128,7 @@
                   <li class="Post__details__li">By <span><strong><?php the_author() ?></strong></span></li>
                   <li class="Post__details__li Post__details__li--time"><time><?php echo get_the_date('F j, Y'); ?></time></li>
                 </ul>
-                <div class="Post__p"><?php the_excerpt(); ?></div>
+                <a class="Post__p" href="<?php the_permalink() ?>"><?php the_excerpt(); ?></a>
               </div>
             </div>
           <?php endwhile; ?>
@@ -158,7 +158,11 @@
             <?php foreach ($sidebar_posts as $post) : setup_postdata($post); ?>
               <li class="Sidebar__ul__li">
                 <div class="Sidebar__ul__li__wrapper">
-                  <h4 class="Sidebar__ul__li__h4"><?php the_title() ?></h4>
+                  <h4 class="Sidebar__ul__li__h4">
+                    <a  href="<?php the_permalink() ?>">
+                      <?php the_title() ?>
+                    </a>
+                  </h4>
                   <ul class="Sidebar__ul__li__ul">
                     <li class="Sidebar__ul__li__ul__li">By <strong><?php the_author() ?></strong></li>
                   </ul>

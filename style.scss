@@ -350,7 +350,7 @@ svg {
 .Post {
   --post-img-mr: calc(var(--global-space) * 2);
   --post-img-mb: 0;
-  --post-p-d: initial;
+  --post-p-d: block;
   --post-detail-li-time-d: initial;
   --post-read-more-d: inline-flex;
   --post-h3-fz: 28px;

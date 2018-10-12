@@ -75,7 +75,11 @@
             <?php foreach ($sidebar_posts as $post) : setup_postdata($post); ?>
               <li class="Sidebar__ul__li">
                 <div class="Sidebar__ul__li__wrapper">
-                  <h4 class="Sidebar__ul__li__h4"><?php the_title() ?></h4>
+                  <h4 class="Sidebar__ul__li__h4">
+                    <a  href="<?php the_permalink() ?>">
+                      <?php the_title() ?>
+                    </a>
+                  </h4>
                   <ul class="Sidebar__ul__li__ul">
                     <li class="Sidebar__ul__li__ul__li">By <strong><?php the_author() ?></strong></li>
                   </ul>
