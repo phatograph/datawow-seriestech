@@ -87,15 +87,10 @@
 <div class="Main">
   <div class="container">
     <div class="Content">
-      <?php
-        set_query_var('post__not_in', array($featured_post_id));
-        $posts = get_posts($wp_query->query_vars);
-      ?>
-
-      <?php if (count($posts)) : ?>
+      <?php if (have_posts()) : ?>
         <div class="Posts">
-          <?php foreach ($posts as $post) : setup_postdata($post); ?>
-            <div class="Post">
+          <?php while (have_posts()) : the_post(); ?>
+            <div class="Post <?php if (get_the_ID() == $featured_post_id) echo('Post--hidden'); ?>">
               <a class="Post__img" href="<?php the_permalink() ?>">
                 <img src="<?php the_post_thumbnail_url(); ?>" />
 
@@ -126,7 +121,7 @@
                 <div class="Post__p"><?php the_excerpt(); ?></div>
               </div>
             </div>
-          <?php endforeach; wp_reset_postdata(); ?>
+          <?php endwhile; ?>
         </div>
       <?php endif; ?>
 
