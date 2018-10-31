@@ -72,10 +72,10 @@ $fonts-path: '#{$assets-path}/fonts';
   src: url(#{$fonts-path}/Quark-Bold.otf);
 }
 
-/* @font-face { */
-/*   font-family: 'Thonburi'; */
-/*   src: url(#{$fonts-path}/Thonburi.ttc); */
-/* } */
+@font-face {
+  font-family: 'Thonburi';
+  src: url(#{$fonts-path}/Thonburi.ttc);
+}
 
 html {
   box-sizing: border-box;
@@ -1208,15 +1208,6 @@ svg {
 
 .Contact {
   flex: 1;
-  display: grid;
-  align-items: flex-start;
-  grid-template-columns: 350px 1fr;
-  grid-gap: calc(var(--global-space) * 7);
-
-  @media (max-width: $screen-tablets) {
-    grid-template-columns: 1fr;
-    grid-gap: calc(var(--global-space));
-  }
 
   &__left {
     display: flex;
@@ -1244,6 +1235,28 @@ svg {
   }
 
   &__right {
+    max-width: 670px;
+    margin: 0 auto;
+
+    > h3 {
+      font-family: Quark-Bold;
+      font-size: 28px;
+      color: #1A1A1A;
+      letter-spacing: 0.76px;
+      text-align: center;
+      margin-bottom: calc(var(--global-space) * .75);
+    }
+
+    > p {
+      font-family: Thonburi;
+      font-size: 16px;
+      color: #1A1A1A;
+
+      &:not(:last-child) {
+        margin-bottom: calc(var(--global-space) * 1.5);
+      }
+    }
+
     &__form {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
