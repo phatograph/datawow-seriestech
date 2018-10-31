@@ -547,25 +547,25 @@ svg {
       .Footer__footer {
         margin-top: calc(var(--global-space) * 1);
         display: block; } }
-    .Footer__footer .menu {
-      display: flex;
-      flex-wrap: wrap; }
-      .Footer__footer .menu > * {
-        margin-bottom: calc(var(--global-space) * .15); }
-        .Footer__footer .menu > *:not(:last-child) {
-          margin-right: calc(var(--global-space) * 2); }
-      .Footer__footer .menu .menu-item a {
-        font-family: Quark-Bold;
-        font-size: 16px;
-        color: #FFFFFF;
-        letter-spacing: 1.33px;
-        text-transform: uppercase; }
-        @media (max-width: 580px) {
-          .Footer__footer .menu .menu-item a {
-            font-size: 14px; } }
     .Footer__footer__nav {
       display: flex;
       align-items: center; }
+      .Footer__footer__nav .menu {
+        display: flex;
+        flex-wrap: wrap; }
+        .Footer__footer__nav .menu > * {
+          margin-bottom: calc(var(--global-space) * .15); }
+          .Footer__footer__nav .menu > *:not(:last-child) {
+            margin-right: calc(var(--global-space) * 2); }
+        .Footer__footer__nav .menu .menu-item a {
+          font-family: Quark-Bold;
+          font-size: 16px;
+          color: #FFFFFF;
+          letter-spacing: 1.33px;
+          text-transform: uppercase; }
+          @media (max-width: 580px) {
+            .Footer__footer__nav .menu .menu-item a {
+              font-size: 14px; } }
       .Footer__footer__nav__right {
         display: flex;
         align-items: center; }
@@ -589,18 +589,18 @@ svg {
           background-image: url(/wp-content/themes/seriestech/images/icon-facebook-w.svg); }
         .Footer__footer__nav__a--twitter::before {
           background-image: url(/wp-content/themes/seriestech/images/icon-twitter-w.svg); }
-    .Footer__footer__ul {
+    .Footer__footer__right .menu {
       display: flex;
       border-left: 2px solid #fff;
       line-height: 1;
       padding-left: calc(var(--global-space) * 1); }
       @media (max-width: 1100px) {
-        .Footer__footer__ul {
+        .Footer__footer__right .menu {
           margin-top: calc(var(--global-space) * 2);
           margin-bottom: calc(var(--global-space) * 1); } }
-      .Footer__footer__ul > *:not(:last-child) {
+      .Footer__footer__right .menu > *:not(:last-child) {
         margin-right: calc(var(--global-space) * 1); }
-      .Footer__footer__ul a {
+      .Footer__footer__right .menu a {
         font-family: Quark-Bold;
         font-size: 16px;
         color: #FFFFFF;

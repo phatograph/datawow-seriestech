@@ -16,6 +16,7 @@ function register_my_menu() {
   register_nav_menu('primary-menu', __('Primary menu'));
   register_nav_menu('footer-menu', __('Footer menu'));
   register_nav_menu('mobile-menu', __('Mobile menu'));
+  register_nav_menu('footer-menu-right', __('Footer menu (right)'));
 }
 add_action('init', 'register_my_menu');
 

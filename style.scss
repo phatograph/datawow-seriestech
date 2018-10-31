@@ -781,36 +781,36 @@ svg {
       display: block;
     }
 
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-
-      > * {
-        margin-bottom: calc(var(--global-space) * .15);
-
-        &:not(:last-child) {
-          margin-right: calc(var(--global-space) * 2);
-        }
-      }
-
-      .menu-item {
-        a {
-          font-family: Quark-Bold;
-          font-size: 16px;
-          color: #FFFFFF;
-          letter-spacing: 1.33px;
-          text-transform: uppercase;
-
-          @media (max-width: $screen-mobiles) {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-
     &__nav {
       display: flex;
       align-items: center;
+
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+          margin-bottom: calc(var(--global-space) * .15);
+
+          &:not(:last-child) {
+            margin-right: calc(var(--global-space) * 2);
+          }
+        }
+
+        .menu-item {
+          a {
+            font-family: Quark-Bold;
+            font-size: 16px;
+            color: #FFFFFF;
+            letter-spacing: 1.33px;
+            text-transform: uppercase;
+
+            @media (max-width: $screen-mobiles) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
 
       &__right {
         display: flex;
@@ -845,28 +845,30 @@ svg {
       }
     }
 
-    &__ul {
-      display: flex;
-      border-left: 2px solid #fff;
-      line-height: 1;
-      padding-left: calc(var(--global-space) * 1);
+    &__right {
+      .menu {
+        display: flex;
+        border-left: 2px solid #fff;
+        line-height: 1;
+        padding-left: calc(var(--global-space) * 1);
 
-      @media (max-width: $screen-tablets-l) {
-        margin-top: calc(var(--global-space) * 2);
-        margin-bottom: calc(var(--global-space) * 1);
-      }
-
-      > * {
-        &:not(:last-child) {
-          margin-right: calc(var(--global-space) * 1);
+        @media (max-width: $screen-tablets-l) {
+          margin-top: calc(var(--global-space) * 2);
+          margin-bottom: calc(var(--global-space) * 1);
         }
-      }
 
-      a {
-        font-family: Quark-Bold;
-        font-size: 16px;
-        color: #FFFFFF;
-        letter-spacing: 1.33px;
+        > * {
+          &:not(:last-child) {
+            margin-right: calc(var(--global-space) * 1);
+          }
+        }
+
+        a {
+          font-family: Quark-Bold;
+          font-size: 16px;
+          color: #FFFFFF;
+          letter-spacing: 1.33px;
+        }
       }
     }
 

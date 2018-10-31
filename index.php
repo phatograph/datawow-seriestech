@@ -63,10 +63,11 @@
             <a class="Footer__footer__nav__a Footer__footer__nav__a--twitter"></a>
           </div>
         </div>
-        <ul class="Footer__footer__ul">
-          <li><a>Terms</a></li>
-          <li><a>Privacy policy</a></li>
-        </ul>
+
+        <div class="Footer__footer__right">
+          <?php wp_nav_menu(array('theme_location' => 'footer-menu-right')); ?>
+        </div>
+
         <p class="Footer__footer__p">Copyright &copy; 2018 series.tech All rights reserved.</p>
       </div>
     </div>
