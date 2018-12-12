@@ -72,10 +72,10 @@ $fonts-path: '#{$assets-path}/fonts';
   src: url(#{$fonts-path}/Quark-Bold.otf);
 }
 
-@font-face {
-  font-family: 'Thonburi';
-  src: url(#{$fonts-path}/Thonburi.otf);
-}
+/* @font-face { */
+/*   font-family: 'Thonburi'; */
+/*   src: url(#{$fonts-path}/Thonburi.otf); */
+/* } */
 
 html {
   box-sizing: border-box;
@@ -585,7 +585,7 @@ svg {
 
   &__p {
     display: var(--post-p-d);
-    font-family: Thonburi, tahoma;
+    font-family: Thonburi;
     font-size: 14px;
     color: #1A1A1A;
   }
@@ -1052,7 +1052,7 @@ svg {
 
 .Single {
   &__ps {
-    font-family: Thonburi, tahoma;
+    font-family: Thonburi;
     font-size: 16px;
     color: #1A1A1A;
 

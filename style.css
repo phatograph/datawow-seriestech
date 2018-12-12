@@ -44,9 +44,10 @@ Text Domain: series
 @font-face {
   font-family: 'Quark-Bold';
   src: url(/wp-content/themes/seriestech/fonts/Quark-Bold.otf); }
-@font-face {
-  font-family: 'Thonburi';
-  src: url(/wp-content/themes/seriestech/fonts/Thonburi.otf); }
+/* @font-face { */
+/*   font-family: 'Thonburi'; */
+/*   src: url(/wp-content/themes/seriestech/fonts/Thonburi.otf); */
+/* } */
 html {
   box-sizing: border-box; }
 
@@ -409,7 +410,7 @@ svg {
         text-shadow: 1px 1px 0 #FCEE21; }
   .Post__p {
     display: var(--post-p-d);
-    font-family: Thonburi, tahoma;
+    font-family: Thonburi;
     font-size: 14px;
     color: #1A1A1A; }
   .Post__read-more {
@@ -724,7 +725,7 @@ svg {
       margin-right: calc(var(--global-space) * .5); }
 
 .Single__ps {
-  font-family: Thonburi, tahoma;
+  font-family: Thonburi;
   font-size: 16px;
   color: #1A1A1A; }
   @media (max-width: 580px) {
