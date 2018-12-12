@@ -34,7 +34,6 @@
           data-href="<?php echo get_permalink() ?>"
           data-layout="button_count"
           data-size="large"
-          data-mobile-iframe="true"
         >
         </div>
       </div>
