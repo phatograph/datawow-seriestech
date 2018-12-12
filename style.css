@@ -33,11 +33,13 @@ Text Domain: series
   --ease-in-out-circ: cubic-bezier(.785, .135, .15, .86); }
 
 @font-face {
-  font-family: 'Phenomena-ExtraLight';
-  src: url(/wp-content/themes/seriestech/fonts/Phenomena-ExtraLight.otf); }
+  font-family: 'Phenomena';
+  src: url(/wp-content/themes/seriestech/fonts/Phenomena-ExtraLight.otf);
+  font-weight: 100; }
 @font-face {
-  font-family: 'Phenomena-Bold';
-  src: url(/wp-content/themes/seriestech/fonts/Phenomena-Bold.otf); }
+  font-family: 'Phenomena';
+  src: url(/wp-content/themes/seriestech/fonts/Phenomena-Bold.otf);
+  font-weight: 700; }
 @font-face {
   font-family: 'Quark';
   src: url(/wp-content/themes/seriestech/fonts/Quark-Light.otf);
@@ -378,7 +380,8 @@ svg {
         border-color: #FCEE21; }
       .Post__tags__a span {
         color: var(--post-tags-a-c);
-        font-family: Phenomena-Bold;
+        font-family: Phenomena;
+        font-weight: bold;
         font-size: 14px;
         letter-spacing: 1px;
         display: flex;
@@ -421,7 +424,8 @@ svg {
   .Post__read-more {
     display: var(--post-read-more-d);
     align-items: center;
-    font-family: Phenomena-Bold;
+    font-family: Phenomena;
+    font-weight: bold;
     font-size: 20px;
     color: #1A1A1A;
     letter-spacing: 1.5px;
@@ -458,7 +462,8 @@ svg {
   .Sidebar > *:not(:last-child) {
     margin-bottom: calc(var(--global-space) * 3); }
   .Sidebar__h2 {
-    font-family: Phenomena-Bold;
+    font-family: Phenomena;
+    font-weight: bold;
     font-size: 20px;
     color: #1A1A1A;
     letter-spacing: 1.5px;
@@ -477,7 +482,8 @@ svg {
       .Sidebar__ul__li::before {
         content: "0" counter(counter-stats-item);
         display: block;
-        font-family: Phenomena-Bold;
+        font-family: Phenomena;
+        font-weight: bold;
         font-size: 28px;
         color: #1A1A1A;
         letter-spacing: 1.5px;
@@ -536,7 +542,8 @@ svg {
           height: 20px; } }
     .Footer__header__p {
       margin-left: calc(var(--global-space) * .5);
-      font-family: Phenomena-ExtraLight;
+      font-family: Phenomena;
+      font-weight: 100;
       font-size: 22px;
       color: #FFFFFF;
       letter-spacing: 0.59px;
@@ -812,7 +819,8 @@ svg {
     .CategoryHeader__wrapper {
       padding-bottom: calc(var(--global-space) * .5); } }
 .CategoryHeader__h2 {
-  font-family: Phenomena-Bold;
+  font-family: Phenomena;
+  font-weight: bold;
   font-size: 28px;
   color: #1A1A1A;
   letter-spacing: 2.1px;
@@ -821,7 +829,8 @@ svg {
     .CategoryHeader__h2 {
       display: none; } }
   .CategoryHeader__h2__search {
-    font-family: Phenomena-Bold;
+    font-family: Phenomena;
+    font-weight: bold;
     font-size: 28px;
     color: #1A1A1A;
     letter-spacing: 2.1px;

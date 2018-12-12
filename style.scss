@@ -53,13 +53,15 @@ $fonts-path: '#{$assets-path}/fonts';
 }
 
 @font-face {
-  font-family: 'Phenomena-ExtraLight';
+  font-family: 'Phenomena';
   src: url(#{$fonts-path}/Phenomena-ExtraLight.otf);
+  font-weight: 100;
 }
 
 @font-face {
-  font-family: 'Phenomena-Bold';
+  font-family: 'Phenomena';
   src: url(#{$fonts-path}/Phenomena-Bold.otf);
+  font-weight: 700;
 }
 
 @font-face {
@@ -530,7 +532,8 @@ svg {
 
       span {
         color: var(--post-tags-a-c);
-        font-family: Phenomena-Bold;
+        font-family: Phenomena;
+        font-weight: bold;
         font-size: 14px;
         letter-spacing: 1px;
         display: flex;
@@ -598,7 +601,8 @@ svg {
   &__read-more {
     display: var(--post-read-more-d);
     align-items: center;
-    font-family: Phenomena-Bold;
+    font-family: Phenomena;
+    font-weight: bold;
     font-size: 20px;
     color: #1A1A1A;
     letter-spacing: 1.5px;
@@ -654,7 +658,8 @@ svg {
   }
 
   &__h2 {
-    font-family: Phenomena-Bold;
+    font-family: Phenomena;
+    font-weight: bold;
     font-size: 20px;
     color: #1A1A1A;
     letter-spacing: 1.5px;
@@ -681,7 +686,8 @@ svg {
       &::before {
         content: '0'counter(counter-stats-item);
         display: block;
-        font-family: Phenomena-Bold;
+        font-family: Phenomena;
+        font-weight: bold;
         font-size: 28px;
         color: #1A1A1A;
         letter-spacing: 1.5px;
@@ -763,7 +769,8 @@ svg {
 
     &__p {
       margin-left: calc(var(--global-space) * .5);
-      font-family: Phenomena-ExtraLight;
+      font-family: Phenomena;
+      font-weight: 100;
       font-size: 22px;
       color: #FFFFFF;
       letter-spacing: 0.59px;
@@ -1172,7 +1179,8 @@ svg {
   }
 
   &__h2 {
-    font-family: Phenomena-Bold;
+    font-family: Phenomena;
+    font-weight: bold;
     font-size: 28px;
     color: #1A1A1A;
     letter-spacing: 2.1px;
@@ -1183,7 +1191,8 @@ svg {
     }
 
     &__search {
-      font-family: Phenomena-Bold;
+      font-family: Phenomena;
+      font-weight: bold;
       font-size: 28px;
       color: #1A1A1A;
       letter-spacing: 2.1px;
