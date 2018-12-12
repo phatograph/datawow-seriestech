@@ -4,7 +4,7 @@ Theme URI: http://neloca.com
 Author: Pat Wangrungarun
 Author URI: http://phatograph.com
 Description: A very specific theme for series.tech.
-Version: 1.2
+Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
@@ -63,13 +63,15 @@ $fonts-path: '#{$assets-path}/fonts';
 }
 
 @font-face {
-  font-family: 'Quark-Light';
+  font-family: 'Quark';
   src: url(#{$fonts-path}/Quark-Light.otf);
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Quark-Bold';
+  font-family: 'Quark';
   src: url(#{$fonts-path}/Quark-Bold.otf);
+  font-weight: 700;
 }
 
 /* @font-face { */
@@ -219,7 +221,7 @@ svg {
       align-items: center;
 
       li {
-        font-family: Quark-Light;
+        font-family: Quark;
         font-size: 14px;
         color: #1A1A1A;
         letter-spacing: 0.38px;
@@ -261,7 +263,7 @@ svg {
         flex: 0 0 125px;
         border: none;
         outline: none;
-        font-family: Quark-Light;
+        font-family: Quark;
         font-size: 14px;
         color: #1A1A1A;
         letter-spacing: 1.17px;
@@ -303,7 +305,7 @@ svg {
 
     .menu-item {
       a {
-        font-family: Quark-Light;
+        font-family: Quark;
         font-size: 16px;
         color: #1A1A1A;
         letter-spacing: 1.33px;
@@ -313,7 +315,8 @@ svg {
 
     .current-menu-item  {
       a {
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         font-size: 16px;
         color: #1A1A1A;
         letter-spacing: 1.33px;
@@ -413,7 +416,7 @@ svg {
     &__by {
       display: none;
       margin-top: calc(var(--global-space) * .15);
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 12px;
       color: #1A1A1A;
       letter-spacing: 0.32px;
@@ -433,7 +436,8 @@ svg {
       justify-content: space-between;
 
       &__views {
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         font-size: 14px;
         color: #1A1A1A;
         letter-spacing: 0.38px;
@@ -470,7 +474,7 @@ svg {
   }
 
   &__time {
-    font-family: Quark-Light;
+    font-family: Quark;
     font-size: var(--post-time-fz);
     color: #1A1A1A;
     letter-spacing: 0.38px;
@@ -546,7 +550,8 @@ svg {
   }
 
   &__h3 {
-    font-family: Quark-Bold;
+    font-family: Quark;
+    font-weight: bold;
     font-size: var(--post-h3-fz);
     color: #1A1A1A;
     letter-spacing: 0.76px;
@@ -566,7 +571,7 @@ svg {
     }
 
     &__li {
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 14px;
       color: #1A1A1A;
       letter-spacing: 0.38px;
@@ -686,7 +691,8 @@ svg {
       }
 
       &__h4 {
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         font-size: 16px;
         color: #1A1A1A;
         letter-spacing: 0.43px;
@@ -697,7 +703,7 @@ svg {
         display: flex;
 
         &__li {
-          font-family: Quark-Light;
+          font-family: Quark;
           font-size: 12px;
           color: #1A1A1A;
           letter-spacing: 0.32px;
@@ -799,7 +805,8 @@ svg {
 
         .menu-item {
           a {
-            font-family: Quark-Bold;
+            font-family: Quark;
+            font-weight: bold;
             font-size: 16px;
             color: #FFFFFF;
             letter-spacing: 1.33px;
@@ -864,7 +871,8 @@ svg {
         }
 
         a {
-          font-family: Quark-Bold;
+          font-family: Quark;
+          font-weight: bold;
           font-size: 16px;
           color: #FFFFFF;
           letter-spacing: 1.33px;
@@ -873,7 +881,7 @@ svg {
     }
 
     &__p {
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 14px;
       color: #FFFFFF;
     }
@@ -913,7 +921,8 @@ svg {
 
 
       .page-numbers {
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         font-size: 14px;
         color: #1A1A1A;
         display: block;
@@ -1013,7 +1022,8 @@ svg {
   }
 
   &__h2 {
-    font-family: Quark-Bold;
+    font-family: Quark;
+    font-weight: bold;
     font-size: 36px;
     color: #1A1A1A;
     letter-spacing: 0.97px;
@@ -1026,7 +1036,8 @@ svg {
   }
 
   &__share {
-    font-family: Quark-Bold;
+    font-family: Quark;
+    font-weight: bold;
     font-size: 14px;
     color: #1A1A1A;
     letter-spacing: 0.38px;
@@ -1061,7 +1072,8 @@ svg {
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-family: Quark-Bold;
+      font-family: Quark;
+      font-weight: bold;
       font-size: 28px;
       color: #1A1A1A;
       letter-spacing: 0.76px;
@@ -1115,7 +1127,7 @@ svg {
       background-color: #F3F3F3;
       margin-top: calc(var(--global-space) * 1.5);
       padding: calc(var(--global-space) * 1.5);
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 28px;
       color: #1A1A1A;
       letter-spacing: 0.76px;
@@ -1180,7 +1192,7 @@ svg {
   }
 
   &__p {
-    font-family: Quark-Light;
+    font-family: Quark;
     font-size: 18px;
     color: #1A1A1A;
     letter-spacing: 0.8px;
@@ -1221,7 +1233,7 @@ svg {
     align-items: flex-start;
 
     &__item {
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 16px;
       color: #1A1A1A;
       letter-spacing: 0.43px;
@@ -1245,7 +1257,8 @@ svg {
     margin: 0 auto;
 
     > h3 {
-      font-family: Quark-Bold;
+      font-family: Quark;
+      font-weight: bold;
       font-size: 28px;
       color: #1A1A1A;
       letter-spacing: 0.76px;
@@ -1274,7 +1287,8 @@ svg {
 
       &__label {
         display: block;
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         font-size: 16px;
         color: #1A1A1A;
         letter-spacing: 0.43px;
@@ -1325,7 +1339,8 @@ svg {
 
         .wpcf7-submit {
           background-color: #1A1A1A;
-          font-family: Quark-Bold;
+          font-family: Quark;
+          font-weight: bold;
           font-size: 16px;
           color: #FFFFFF;
           letter-spacing: 0.43px;
@@ -1344,7 +1359,8 @@ svg {
           margin-top: calc(var(--global-space) * .5);
           border: none;
           padding: 0;
-          font-family: Quark-Bold;
+          font-family: Quark;
+          font-weight: bold;
           font-size: 16px;
           color: #1A1A1A;
           letter-spacing: 0.43px;
@@ -1450,7 +1466,7 @@ svg {
         .menu-item {
           a {
             text-transform: uppercase;
-            font-family: Quark-Light;
+            font-family: Quark;
             font-size: 18px;
             color: #1A1A1A;
             letter-spacing: 1.5px;
@@ -1460,7 +1476,8 @@ svg {
 
         .current-menu-item {
           a {
-            font-family: Quark-Bold;
+            font-family: Quark;
+            font-weight: bold;
             position: relative;
 
             &::after {

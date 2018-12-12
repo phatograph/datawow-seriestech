@@ -4,7 +4,7 @@ Theme URI: http://neloca.com
 Author: Pat Wangrungarun
 Author URI: http://phatograph.com
 Description: A very specific theme for series.tech.
-Version: 1.2
+Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
@@ -39,11 +39,13 @@ Text Domain: series
   font-family: 'Phenomena-Bold';
   src: url(/wp-content/themes/seriestech/fonts/Phenomena-Bold.otf); }
 @font-face {
-  font-family: 'Quark-Light';
-  src: url(/wp-content/themes/seriestech/fonts/Quark-Light.otf); }
+  font-family: 'Quark';
+  src: url(/wp-content/themes/seriestech/fonts/Quark-Light.otf);
+  font-weight: 400; }
 @font-face {
-  font-family: 'Quark-Bold';
-  src: url(/wp-content/themes/seriestech/fonts/Quark-Bold.otf); }
+  font-family: 'Quark';
+  src: url(/wp-content/themes/seriestech/fonts/Quark-Bold.otf);
+  font-weight: 700; }
 /* @font-face { */
 /*   font-family: 'Thonburi'; */
 /*   src: url(/wp-content/themes/seriestech/fonts/Thonburi.otf); */
@@ -152,7 +154,7 @@ svg {
       display: flex;
       align-items: center; }
       .Header__top__ul li {
-        font-family: Quark-Light;
+        font-family: Quark;
         font-size: 14px;
         color: #1A1A1A;
         letter-spacing: 0.38px; }
@@ -182,7 +184,7 @@ svg {
         flex: 0 0 125px;
         border: none;
         outline: none;
-        font-family: Quark-Light;
+        font-family: Quark;
         font-size: 14px;
         color: #1A1A1A;
         letter-spacing: 1.17px;
@@ -213,13 +215,14 @@ svg {
     grid-gap: calc(var(--global-space));
     justify-content: center; }
     .Nav ul .menu-item a {
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 16px;
       color: #1A1A1A;
       letter-spacing: 1.33px;
       text-transform: uppercase; }
     .Nav ul .current-menu-item a {
-      font-family: Quark-Bold;
+      font-family: Quark;
+      font-weight: bold;
       font-size: 16px;
       color: #1A1A1A;
       letter-spacing: 1.33px;
@@ -295,7 +298,7 @@ svg {
     .Post__img__by {
       display: none;
       margin-top: calc(var(--global-space) * .15);
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 12px;
       color: #1A1A1A;
       letter-spacing: 0.32px; }
@@ -309,7 +312,8 @@ svg {
       align-items: flex-start;
       justify-content: space-between; }
       .Post__right__info__views {
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         font-size: 14px;
         color: #1A1A1A;
         letter-spacing: 0.38px;
@@ -335,7 +339,7 @@ svg {
     .Post__right > *:not(:last-child) {
       margin-bottom: calc(var(--global-space) * .5); }
   .Post__time {
-    font-family: Quark-Light;
+    font-family: Quark;
     font-size: var(--post-time-fz);
     color: #1A1A1A;
     letter-spacing: 0.38px;
@@ -388,7 +392,8 @@ svg {
           border-radius: 50%;
           margin-right: calc(var(--global-space) * .25); }
   .Post__h3 {
-    font-family: Quark-Bold;
+    font-family: Quark;
+    font-weight: bold;
     font-size: var(--post-h3-fz);
     color: #1A1A1A;
     letter-spacing: 0.76px; }
@@ -400,7 +405,7 @@ svg {
     .Post__details > *:not(:last-child) {
       margin-right: calc(var(--global-space) * 1); }
     .Post__details__li {
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 14px;
       color: #1A1A1A;
       letter-spacing: 0.38px; }
@@ -480,7 +485,8 @@ svg {
         margin-right: calc(var(--global-space) * 1);
         line-height: 1; }
       .Sidebar__ul__li__h4 {
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         font-size: 16px;
         color: #1A1A1A;
         letter-spacing: 0.43px; }
@@ -488,7 +494,7 @@ svg {
         margin-top: calc(var(--global-space) * .25);
         display: flex; }
         .Sidebar__ul__li__ul__li {
-          font-family: Quark-Light;
+          font-family: Quark;
           font-size: 12px;
           color: #1A1A1A;
           letter-spacing: 0.32px; }
@@ -559,7 +565,8 @@ svg {
           .Footer__footer__nav .menu > *:not(:last-child) {
             margin-right: calc(var(--global-space) * 2); }
         .Footer__footer__nav .menu .menu-item a {
-          font-family: Quark-Bold;
+          font-family: Quark;
+          font-weight: bold;
           font-size: 16px;
           color: #FFFFFF;
           letter-spacing: 1.33px;
@@ -602,12 +609,13 @@ svg {
       .Footer__footer__right .menu > *:not(:last-child) {
         margin-right: calc(var(--global-space) * 1); }
       .Footer__footer__right .menu a {
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         font-size: 16px;
         color: #FFFFFF;
         letter-spacing: 1.33px; }
     .Footer__footer__p {
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 14px;
       color: #FFFFFF; }
 
@@ -629,7 +637,8 @@ svg {
       .Pagination .pagination .nav-links > *[class="page-numbers"] {
         display: none !important; } }
     .Pagination .pagination .nav-links .page-numbers {
-      font-family: Quark-Bold;
+      font-family: Quark;
+      font-weight: bold;
       font-size: 14px;
       color: #1A1A1A;
       display: block;
@@ -694,7 +703,8 @@ svg {
       width: 100%;
       object-fit: cover; }
   .HeroPost__h2 {
-    font-family: Quark-Bold;
+    font-family: Quark;
+    font-weight: bold;
     font-size: 36px;
     color: #1A1A1A;
     letter-spacing: 0.97px;
@@ -704,7 +714,8 @@ svg {
         margin: calc(var(--global-space) * .75) 0;
         font-size: 24px; } }
   .HeroPost__share {
-    font-family: Quark-Bold;
+    font-family: Quark;
+    font-weight: bold;
     font-size: 14px;
     color: #1A1A1A;
     letter-spacing: 0.38px;
@@ -732,7 +743,8 @@ svg {
     .Single__ps {
       font-size: 14px; } }
   .Single__ps h1, .Single__ps h2, .Single__ps h3, .Single__ps h4, .Single__ps h5, .Single__ps h6 {
-    font-family: Quark-Bold;
+    font-family: Quark;
+    font-weight: bold;
     font-size: 28px;
     color: #1A1A1A;
     letter-spacing: 0.76px; }
@@ -767,7 +779,7 @@ svg {
     background-color: #F3F3F3;
     margin-top: calc(var(--global-space) * 1.5);
     padding: calc(var(--global-space) * 1.5);
-    font-family: Quark-Light;
+    font-family: Quark;
     font-size: 28px;
     color: #1A1A1A;
     letter-spacing: 0.76px;
@@ -815,7 +827,7 @@ svg {
     letter-spacing: 2.1px;
     text-shadow: 2px 2px 0 #FCEE21; }
 .CategoryHeader__p {
-  font-family: Quark-Light;
+  font-family: Quark;
   font-size: 18px;
   color: #1A1A1A;
   letter-spacing: 0.8px;
@@ -845,7 +857,7 @@ svg {
     flex-wrap: wrap;
     align-items: flex-start; }
     .Contact__left__item {
-      font-family: Quark-Light;
+      font-family: Quark;
       font-size: 16px;
       color: #1A1A1A;
       letter-spacing: 0.43px;
@@ -861,7 +873,8 @@ svg {
     max-width: 670px;
     margin: 0 auto; }
     .Contact__right > h3 {
-      font-family: Quark-Bold;
+      font-family: Quark;
+      font-weight: bold;
       font-size: 28px;
       color: #1A1A1A;
       letter-spacing: 0.76px;
@@ -882,7 +895,8 @@ svg {
           grid-template-columns: 1fr; } }
       .Contact__right__form__label {
         display: block;
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         font-size: 16px;
         color: #1A1A1A;
         letter-spacing: 0.43px; }
@@ -917,7 +931,8 @@ svg {
             grid-column: initial; } }
         .Contact__right__form__submit .wpcf7-submit {
           background-color: #1A1A1A;
-          font-family: Quark-Bold;
+          font-family: Quark;
+          font-weight: bold;
           font-size: 16px;
           color: #FFFFFF;
           letter-spacing: 0.43px;
@@ -928,7 +943,8 @@ svg {
       margin-top: calc(var(--global-space) * .5);
       border: none;
       padding: 0;
-      font-family: Quark-Bold;
+      font-family: Quark;
+      font-weight: bold;
       font-size: 16px;
       color: #1A1A1A;
       letter-spacing: 0.43px; }
@@ -1004,13 +1020,14 @@ svg {
         margin-bottom: calc(var(--global-space) * 1.5); }
       .MobileMenu__panel__menu .menu .menu-item a {
         text-transform: uppercase;
-        font-family: Quark-Light;
+        font-family: Quark;
         font-size: 18px;
         color: #1A1A1A;
         letter-spacing: 1.5px;
         display: block; }
       .MobileMenu__panel__menu .menu .current-menu-item a {
-        font-family: Quark-Bold;
+        font-family: Quark;
+        font-weight: bold;
         position: relative; }
         .MobileMenu__panel__menu .menu .current-menu-item a::after {
           content: '';
