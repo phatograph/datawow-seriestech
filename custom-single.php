@@ -29,7 +29,14 @@
           <li class="Post__details__li"><time><?php echo get_the_date('F j, Y'); ?></time></li>
         </ul>
 
-        <a class="HeroPost__share">Share</a>
+        <div
+          class="fb-share-button"
+          data-href="<?php echo get_permalink() ?>"
+          data-layout="button_count"
+          data-size="large"
+          data-mobile-iframe="true"
+        >
+        </div>
       </div>
     </div>
 
