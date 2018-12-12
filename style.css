@@ -46,7 +46,7 @@ Text Domain: series
   src: url(/wp-content/themes/seriestech/fonts/Quark-Bold.otf); }
 @font-face {
   font-family: 'Thonburi';
-  src: url(/wp-content/themes/seriestech/fonts/Thonburi.ttc); }
+  src: url(/wp-content/themes/seriestech/fonts/Thonburi.otf); }
 html {
   box-sizing: border-box; }
 
@@ -760,6 +760,8 @@ svg {
     @media (max-width: 580px) {
       .Single__ps > p > small {
         font-size: 11px; } }
+  .Single__ps > p > iframe {
+    max-width: 100%; }
   .Single__ps > blockquote {
     background-color: #F3F3F3;
     margin-top: calc(var(--global-space) * 1.5);
