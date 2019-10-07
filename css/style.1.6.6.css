@@ -764,12 +764,6 @@ svg {
     @media (max-width: 580px) {
       .Single__ps > *:not(:last-child) {
         margin-bottom: calc(var(--global-space) * .75); } }
-  .Single__ps > p > img {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: calc(var(--global-space) * 1.5);
-    width: auto;
-    height: auto; }
   .Single__ps > p > small {
     font-size: 14px;
     display: block;
@@ -806,6 +800,15 @@ svg {
       top: 0;
       left: calc(var(--global-space) * .75);
       transform: translateY(-50%); }
+  .Single__ps > .wp-block-image {
+    margin-bottom: calc(var(--global-space) * 1.5); }
+    .Single__ps > .wp-block-image img {
+      height: auto; }
+    .Single__ps > .wp-block-image .aligncenter img {
+      margin-right: auto;
+      margin-left: auto; }
+    .Single__ps > .wp-block-image .alignright img {
+      margin-left: auto; }
 
 .CategoryHeader .container {
   margin-bottom: calc(var(--global-space) * 1.5); }
@@ -1049,4 +1052,4 @@ svg {
   font-size: 16px;
   color: #1A1A1A; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.1.6.6.css.map */

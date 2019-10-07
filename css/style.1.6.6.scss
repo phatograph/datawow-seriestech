@@ -1107,11 +1107,6 @@ svg {
 
     > p {
       > img {
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: calc(var(--global-space) * 1.5);
-        width: auto;
-        height: auto;
       }
 
       > small {
@@ -1158,6 +1153,27 @@ svg {
         top: 0;
         left: calc(var(--global-space) * .75);
         transform: translateY(-50%);
+      }
+    }
+
+    > .wp-block-image {
+      margin-bottom: calc(var(--global-space) * 1.5);
+
+      img {
+        height: auto;
+      }
+
+      .aligncenter {
+        img {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      .alignright {
+        img {
+          margin-left: auto;
+        }
       }
     }
   }
