@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html data-version="1.6.7">
   <head>
     <title>Series <?php wp_title('|'); ?></title>
 
-    <meta name="version" content="1.6.6" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
     <meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
 
     <link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.png" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/style.1.6.6.css" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/style.1.6.7.css" />
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/dist/script.js"></script>
 
     <!-- <link rel="stylesheet" href="http://192.168.1.59:8888/series/wp&#45;content/themes/series/style.css" /> -->
