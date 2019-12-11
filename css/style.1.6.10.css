@@ -773,9 +773,6 @@ svg {
     @media (max-width: 580px) {
       .Single__ps > p > small {
         font-size: 11px; } }
-  .Single__ps > p iframe {
-    display: block;
-    max-width: 100%; }
   .Single__ps > blockquote {
     background-color: #F3F3F3;
     margin-top: calc(var(--global-space) * 1.5);
@@ -810,7 +807,8 @@ svg {
       margin-left: auto; }
     .Single__ps > .wp-block-image .alignright img {
       margin-left: auto; }
-  .Single__ps > iframe {
+  .Single__ps iframe {
+    display: block;
     max-width: 100%; }
 
 .CategoryHeader .container {
@@ -1055,4 +1053,4 @@ svg {
   font-size: 16px;
   color: #1A1A1A; }
 
-/*# sourceMappingURL=style.1.6.8.css.map */
+/*# sourceMappingURL=style.1.6.10.css.map */
