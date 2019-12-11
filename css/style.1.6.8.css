@@ -773,7 +773,8 @@ svg {
     @media (max-width: 580px) {
       .Single__ps > p > small {
         font-size: 11px; } }
-  .Single__ps > p > iframe {
+  .Single__ps > p iframe {
+    display: block;
     max-width: 100%; }
   .Single__ps > blockquote {
     background-color: #F3F3F3;
@@ -1054,4 +1055,4 @@ svg {
   font-size: 16px;
   color: #1A1A1A; }
 
-/*# sourceMappingURL=style.1.6.7.css.map */
+/*# sourceMappingURL=style.1.6.8.css.map */
