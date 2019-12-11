@@ -1120,11 +1120,6 @@ svg {
           font-size: 11px;
         }
       }
-
-      iframe {
-        display: block;
-        max-width: 100%;
-      }
     }
 
     > blockquote {
@@ -1179,6 +1174,7 @@ svg {
     }
 
     > iframe {
+      display: block;
       max-width: 100%;
     }
   }
