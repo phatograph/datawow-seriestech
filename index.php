@@ -68,7 +68,7 @@
           <?php wp_nav_menu(array('theme_location' => 'footer-menu-right')); ?>
         </div>
 
-        <p class="Footer__footer__p">Copyright &copy; 2018 series.tech All rights reserved.</p>
+        <p class="Footer__footer__p">Copyright &copy; <?php echo date("Y"); ?> series.tech All rights reserved.</p>
       </div>
     </div>
   </footer>

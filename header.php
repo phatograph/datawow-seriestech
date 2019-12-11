@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html data-version="1.6.10">
+<html data-version="1.6.11">
   <head>
     <title>Series <?php wp_title('|'); ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
+    <meta name="google-site-verification" content="_-xOvvvbQEYxsMJfnh6AdkayvOoa0gHwhwQj1rkQ_uc" />
+
     <meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
+    <meta name="description"
+      content="<?php if (is_single()) {
+          single_post_title('', true);
+        } else {
+          bloginfo('name'); // echo " - "; bloginfo('description');
+        }
+      ?>"
+    />
 
     <link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.png" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/style.1.6.10.css" />
