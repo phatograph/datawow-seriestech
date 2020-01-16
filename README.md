@@ -8,8 +8,13 @@ $ docker-compose up
 
 Docker will start services as containers in the console,
 which allows us to be able to start developing right away.
+Wordpress site will be accessible from `localhost:8080`.
 
-To stop the service, simply use `ctrl+C`.
+If you run this command for the first time, you will need to go through
+a wordpress setting up process in the browser. And you'll
+also need to change a theme to the one you're developing manually.
+
+To stop the service, simply use `Ctrl+C`.
 
 Note that Docker will keep wordpress and mysql data, which take up
 spaces as volumes. You can check the volumes using this command.
