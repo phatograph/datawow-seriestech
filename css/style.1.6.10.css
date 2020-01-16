@@ -36,18 +36,22 @@ Text Domain: series
   font-family: 'Phenomena';
   src: url(/wp-content/themes/seriestech/fonts/Phenomena-ExtraLight.otf);
   font-weight: 100; }
+
 @font-face {
   font-family: 'Phenomena';
   src: url(/wp-content/themes/seriestech/fonts/Phenomena-Bold.otf);
   font-weight: 700; }
+
 @font-face {
   font-family: 'Quark';
   src: url(/wp-content/themes/seriestech/fonts/Quark-Light.otf);
   font-weight: 400; }
+
 @font-face {
   font-family: 'Quark';
   src: url(/wp-content/themes/seriestech/fonts/Quark-Bold.otf);
   font-weight: 700; }
+
 /* @font-face { */
 /*   font-family: 'Thonburi'; */
 /*   src: url(/wp-content/themes/seriestech/fonts/Thonburi.otf); */
@@ -813,6 +817,7 @@ svg {
 
 .CategoryHeader .container {
   margin-bottom: calc(var(--global-space) * 1.5); }
+
 .CategoryHeader__wrapper {
   padding-bottom: calc(var(--global-space) * .75);
   border-bottom: 1px solid rgba(26, 26, 26, 0.2);
@@ -821,6 +826,7 @@ svg {
   @media (max-width: 580px) {
     .CategoryHeader__wrapper {
       padding-bottom: calc(var(--global-space) * .5); } }
+
 .CategoryHeader__h2 {
   font-family: Phenomena;
   font-weight: bold;
@@ -838,6 +844,7 @@ svg {
     color: #1A1A1A;
     letter-spacing: 2.1px;
     text-shadow: 2px 2px 0 #FCEE21; }
+
 .CategoryHeader__p {
   font-family: Quark;
   font-size: 18px;
